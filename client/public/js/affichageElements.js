@@ -142,13 +142,15 @@ function remplirResume(contenu) {
     let resultat = '';
 
     //Compétences
-    resultat  +=  '<ul class="bullet-point" style="margin-right:14%;">';
-    resultat += '<h4>Compétences</h4>';
-    for (let competence of contenu.competences) {
-        if (competence)
-            resultat += '<li>' + affichage_texte_option(competence) + '</li>';
+    if (contenu.competences.length > 0) {
+        resultat  +=  '<ul class="bullet-point" style="margin-right:14%;">';
+        resultat += '<h4>Compétences</h4>';
+        for (let competence of contenu.competences) {
+            if (competence)
+                resultat += '<li>' + affichage_texte_option(competence) + '</li>';
+        }
+        resultat += '</ul>';
     }
-    resultat += '</ul>';
 
     //Technique
     if(contenu.logiciels.length > 0) {
