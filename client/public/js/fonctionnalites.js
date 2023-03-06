@@ -173,7 +173,7 @@ function determinerTailleEcran() {
                                 olidesmarais@hotmail.com<br>
                                 (514) 404-7808</p>
                                 <p><strong>Dernière mise à jour</strong><br>
-                                    5/03/2023</p>
+                                    5 mars 2023</p>
                             </footer>
                         `
     /*} else { //Si l'écran n'a pas la taille nécessaire
