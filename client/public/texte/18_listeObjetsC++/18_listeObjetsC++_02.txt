@@ -1,0 +1,33 @@
+Il y a 26 personne(s) dans la liste de personnes
+
+Informations des 8 premières personnes des la liste :
+  0) ROY CHANTAL                         2754    1.75  57.9   feminin
+  1) MOLAISON CLAUDINE                   1848    1.57  62.2   feminin
+  2) ROBITAILLE CHANTALE                 2007    1.79  72.3   feminin
+  3) BEDARD MARC-ANDRE                   2636    1.43  55.5  masculin
+  4) MONAST STEPHANE                     1750    1.65  61.7  masculin
+  5) JALBERT LYNE                        2168    1.63  52.6   feminin
+  6) DUBE FRANCOISE                      4612    1.68  67.5   feminin
+  7) ROBITAILLE SUZANNE                  2325    1.72  75.4   feminin
+  8) ...
+
+Informations des personnes nommées Robitaille Suzanne dans la liste :
+  7) ROBITAILLE SUZANNE                  2325    1.72  75.4   feminin
+ 12) ROBITAILLE SUZANNE                  8007    1.82  76.1   feminin
+ 17) ROBITAILLE SUZANNE                  7654    1.63  75.1   feminin
+ 28) ROBITAILLE SUZANNE                  4119    1.68  60.2   feminin
+
+Informations des 11 premières personnes des la liste :
+  0) ROY CHANTAL                         2754    1.75  57.9   feminin
+  1) MOLAISON CLAUDINE                   1848    1.57  62.2   feminin
+  2) ROBITAILLE CHANTALE                 2007    1.79  72.3   feminin
+  3) BEDARD MARC-ANDRE                   2636    1.43  55.5  masculin
+  4) MONAST STEPHANE                     1750    1.65  61.7  masculin
+  5) DUBE FRANCOISE                      4612    1.68  67.5   feminin
+  6) ROBITAILLE SUZANNE                  2325    1.72  75.4   feminin
+  7) LEMELIN SOPHIE                      7777    1.88  57.8   feminin
+  8) LABELLE LISE                        1512    1.79  68.0   feminin
+  9) CHOQUETTE HELENE                    2340    1.71  60.8   feminin
+ 10) ROBITAILLE SUZANNE                  8007    1.82  76.1   feminin
+ 11) ...
+Program ended with exit code: 0

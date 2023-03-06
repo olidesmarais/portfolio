@@ -1,0 +1,254 @@
+#Olivier Desmarais, 20050502
+
+import random as rand
+
+class Trie:
+	class TrieNode:
+		def __init__(self):
+			self.isWord = False
+			self.children = [None]*26
+
+	def __init__(self):
+		self.root = self.TrieNode()
+
+	# Inserts word composed of only a-z in trie
+	def insert(self, word):
+		#TO DO
+
+		noeudCourant = self.root
+
+		#Vérifier si le mot est composé de lettres de a à z
+		for lettre in word:
+			idxLettre = ord(lettre) - ord('a')
+			if idxLettre < 0 or idxLettre > 26:
+				continue
+
+		#Ajouter le mot au trie
+		for lettre in word:
+			idxLettre = ord(lettre) - ord('a')
+			if noeudCourant.children[idxLettre] == None:
+				noeudCourant.children[idxLettre] = self.TrieNode()
+			noeudCourant = noeudCourant.children[idxLettre]
+
+		#Ajout de la propriété isWord au noeud de la dernière lettre du mot
+		noeudCourant.isWord = True
+
+	# Verifies if word composed of only a-z is either
+	# (1) Contained in trie and is a word, returns 1
+	# (2) Contained in trie and isn't a word, returns 0
+	# (3) Not contained in trie, returns -1
+	def get(self, word):
+		#TO DO
+		nouedCourant = self.root
+
+		#Pour toutes les lettres du mot
+		for lettre in word:
+			idxLettre = ord(lettre) - ord('a')
+			#Vérifier si la lettre est contnue entre a et z
+			if idxLettre < 0 or idxLettre > 26:
+				return -1
+			#Vérifier si la suite de lettre figure dans le trie (case 3)
+			if nouedCourant.children[idxLettre] == None:
+				return -1
+			nouedCourant = nouedCourant.children[idxLettre]
+
+		#Si la suite de lettre est un mot (case 1)
+		if nouedCourant.isWord:
+			return 1
+		#Si la suite de lettre n'est pas un mot (case 2)
+		return 0
+
+class SearchState:
+	# i and j are the coordonates of last char used in search
+	def __init__(self, result, board, i, j):
+		self.result = result
+		self.board = board
+		self.i = i
+		self.j = j
+
+	def __str__(self):
+		result = self.result + "\n"
+
+		for line in self.board:
+			for char in line:
+				result += char + " "
+
+			result += "\n"
+
+		return result
+
+class BoggleSolver:
+	def __init__(self, n=4):
+		self.n = n
+		self.board = self.genBoard()
+		self.solution = []
+
+	def __str__(self):
+		result = ""
+
+		for line in self.board:
+			for char in line:
+				result += char + " "
+
+			result += "\n"
+
+		return result
+
+	# Returns 2D list of corresponding to a Boggle board
+	def genBoard(self):
+		result = []
+
+		for i in range(0, self.n):
+			line = []
+
+			for j in range(0, self.n):
+				line.append(chr(rand.randint(97,122)))
+
+			result.append(line)
+
+		return result
+
+	# Returns copy of board, but with i and j capitalized 
+	def getBoardCopy(self, board, i, j):
+    	#TO DO
+		result = []
+
+		#Pour toutes les colonnes et toutes les rangées
+		for idx in range(self.n):
+			line = []
+			for jdx in range(self.n):
+    			#Ajout de la lettre majuscule pour la position d'intérêt
+				if idx == i and jdx == j:
+					line.append(board[idx][jdx].capitalize())
+				#Reproduction de ce qu'il y a déjà pour les autres lettres
+				else:
+					line.append(board[idx][jdx])
+    		#Ajout de la rangée au résultat	
+			result.append(line)
+
+		return result
+
+	# Returns n*n search states corresponding to inial board
+	def genStartingPoints(self):
+		result = []
+
+		#TO DO
+		#Créer un SearchState où chaque lettre est un point de départ
+		for idx in range (self.n):
+			for jdx in range(self.n):
+				#Board du SearchState
+				board = self.getBoardCopy(self.board, idx, jdx)
+				#Result du search state
+				word = self.board[idx][jdx]
+				#Ajout du SearchState au result
+				result.append(SearchState(word, board, idx, jdx))
+
+		return result
+
+	# Returns the search states adjacent to another state
+	def getNextStates(self, state):
+		nextStates = []
+		
+		#TO DO
+		#Liste des positions possible
+		positions = []
+		#Haut gauche (i-1 j-1)
+		positions.append((state.i - 1, state.j - 1))
+		#Haut (i-1)
+		positions.append((state.i - 1, state.j))
+		#Haut droite (i-1 j+1)
+		positions.append((state.i - 1, state.j + 1))
+		#Gauche (j-1)
+		positions.append((state.i, state.j - 1))
+		#Droite (j+1)
+		positions.append((state.i, state.j + 1))
+		#Bas (i+1)
+		positions.append((state.i + 1, state.j))
+		#Bas gauche (i+1 j-1)
+		positions.append((state.i + 1, state.j - 1))
+		#Bas droite (i+1 j+1)
+		positions.append((state.i + 1, state.j + 1))
+
+		#Pour chaque position possible
+		for position in positions:
+			i, j = position
+			#On s'assure d'être dans les bornes
+			if j >= 0 and j < self.n and i >= 0 and i < self.n:
+    			# On s'assure de visiter une lettre qui ne compose pas déjà la lettre 
+				# et on l'ajoute aux prochains states potentiels
+				if ord(state.board[i][j]) >= 97 and ord(state.board[i][j]) <= 122:
+					result = state.result + state.board[i][j]
+					board = self.getBoardCopy(state.board, i, j)
+					nextStates.append(SearchState(result, board, i, j))
+
+		return nextStates
+
+	# Returns if word is a valid word in Boggle
+	def check(self, word):
+		if word == '' or len(word) < 3:
+			return False
+		for char in word:
+			if ord(char) > 122 or ord(char) < 97:
+				return False
+
+		return True
+
+	# Adds to self.solution the searchStates that are words 
+	# contained by the trie composed of all words in words.txt
+	def solve(self):
+		my_file = open("words.txt", "r")
+		content = my_file.read()
+
+		words = content.split("\n")
+		my_file.close()
+
+		trie = Trie()
+
+		# Inserting all english words into trie
+		for word in words:
+			if self.check(word):
+				trie.insert(word)
+
+		search = self.genStartingPoints()
+
+		while len(search) != 0:
+			nextSearch = []
+
+			for state in search:
+				#TO DO
+				
+				#Ajouter l'état aux solutions s'il répond aux critères
+				if trie.get(state.result) == 1 and self.check(state.result):
+					self.solution.append(state)
+				
+				#Déterminer les prochains états potentiels 
+				nextStatesPotentiels = self.getNextStates(state)
+				
+				#Si la suite de lettre a toujours le potentiel de former un mot, on l'ajoute aux prochains états
+				for nextState in nextStatesPotentiels:
+					if trie.get(nextState.result) >= 0:
+						nextSearch.append(nextState)
+
+			search = nextSearch
+
+	def printSolution(self):
+		for solution in self.solution:
+			print(solution)
+
+rand.seed(22)
+problem = BoggleSolver()
+
+print(problem)
+print(problem.solution)
+
+problem.solve()
+problem.printSolution()
+
+
+
+
+
+
+
+
+

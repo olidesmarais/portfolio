@@ -1,0 +1,234 @@
+# Olivier, Desmarais, 20050502
+# Yutaka, Suzuki, 20153109
+
+import numpy as np
+import random as rand
+import sys as sys
+
+class Colony:
+    class Ant:
+        def __init__(self, colony):
+            self.colony = colony
+            self.pos = rand.randrange(self.colony.n)
+
+            self.mem = np.zeros(self.colony.n)
+            self.mem[self.pos] = 1
+
+            self.path = [self.pos]
+            self.cost = 0
+
+        def reset(self, colony):
+            self.__init__(colony)
+
+        def __str__(self):
+            #TO DO
+            return str(self.path) + ", cost : " + str(self.cost)
+
+        def __lt__(self, other): #redéfinition de l'opérateur <
+            #TO DO
+            return self.cost < other.cost
+
+        # Returns city to be travelled to from current position
+        def policy(self):
+            
+            if rand.random() < self.colony.q_0:
+                # Deterministic decision
+                # TODO
+                #Tableau d'attirance envers les autres points du graphe
+                attirance = np.zeros(self.colony.n)
+                #On trouve le niveau d'attirance pour chaque sommets
+                for idxConsidere in range(self.colony.n):
+                    if self.mem[idxConsidere] == 0:
+                        attirance[idxConsidere] = (self.colony.tau[self.pos][idxConsidere]) * (self.colony.eta(self.pos, idxConsidere) ** self.colony.beta)
+
+                #On retourn l'index du sommet dont l'attirance est la plus forte
+                return np.argmax(attirance)
+                
+            else:
+                # Stochastic decision
+                # TODO
+                probabilite = []
+                #Déteminer la valeur de la somme du diviseur
+                diviseur = 0
+                for idxConsidere in range(self.colony.n):
+                    if self.mem[idxConsidere] == 0:
+                        diviseur += (self.colony.tau[self.pos][idxConsidere]) * (self.colony.eta(self.pos, idxConsidere) ** self.colony.beta)
+                
+                #On trouve la probabilié pour chaque sommets
+                idxProb = 0
+                idxRetenus = []
+                for idxConsidere in range(self.colony.n):
+                    if self.mem[idxConsidere] == 0:
+                        prob = (self.colony.tau[self.pos][idxConsidere] * (self.colony.eta(self.pos, idxConsidere) ** self.colony.beta)) / diviseur
+                        probabilite.append(prob)
+                        idxRetenus.append(idxConsidere)
+                        if idxProb > 0 :
+                            probabilite[idxProb] += probabilite[idxProb - 1]
+                        idxProb += 1
+
+                #On détermine aléatoirement et renvoie la valeur à retourner proportionnellement à la probabilité
+                aleatoire = rand.random()
+                idxProb = 0
+                valProb = probabilite[idxProb]
+                if aleatoire >= probabilite[len(idxRetenus) - 2]:
+                        idxProb = len(idxRetenus) - 1
+                while aleatoire >= valProb and idxProb < len(idxRetenus) - 2:
+                        idxProb += 1
+                        valProb = probabilite[idxProb]
+
+                return idxRetenus[idxProb]
+
+        # Updates the local pheromones and position of ant
+        # while keeping track of total cost and path
+        def move(self):
+            
+            #Déteminer le prochain point à explorer
+            destination = self.policy()
+
+            # local updating
+            # TODO
+            self.colony.tau[self.pos][destination] = (1 - self.colony.alpha) * self.colony.tau[self.pos][destination] + self.colony.alpha * self.colony.tau_0
+
+            # Change position
+            # TODO
+            self.cost += self.adjMat[self.pos][destination]
+            self.pos = destination
+            self.path.append(destination)
+            self.mem[destination] = 1        
+
+        # Updates the pheromone levels of ALL edges that form 
+        # the minimum cost loop at each iteration
+        def globalUpdate(self):
+            # TODO
+
+            #Imprimer le chemin dans le fichier result.txt
+            fileResult.write(str(self) + "\n")
+
+            #Update des niveaux de phéromone
+            #Pour tout le chemin
+            for idx in range(len(self.path) - 1):
+                tau = self.colony.tau[self.path[idx]][self.path[idx + 1]]
+                delta_tau = 1 / self.cost
+                self.colony.tau[self.path[idx]][self.path[idx + 1]] = (1 - self.colony.alpha) * tau + self.colony.alpha * delta_tau
+            
+            #Pour le retour au point de départ
+            tau = self.colony.tau[self.path[len(self.path) - 1]][self.path[0]]
+            delta_tau = 1 / self.cost
+            self.colony.tau[self.path[len(self.path) - 1]][self.path[0]] = (1 - self.colony.alpha) * tau + self.colony.alpha * delta_tau
+
+        #Tentative de tour d'amélioration
+        def tourImprovement(self):
+            #Nous n'avons pas réussi à réaliser le bonus en entier,
+            #Mais le stade où nous sommes est en commentaire au bas du code.
+            pass
+
+    def __init__(self, adjMat, m=10, beta=2, alpha=0.1, q_0=0.9):
+        # Parameters: 
+        # m => Number of ants
+        # beta => Importance of heuristic function vs pheromone trail
+        # alpha => Updating propensity
+        # q_0 => Probability of making a non-stochastic decision
+        # tau_0 => Initial pheromone level
+
+        #Info fournie
+        self.adjMat = adjMat
+        self.n = len(adjMat)
+
+        self.tau_0 = 1 / (self.n * self.nearestNearbourHeuristic())
+        self.tau = [[self.tau_0 for _ in range(self.n)] for _ in range(self.n)]
+        self.ants = [self.Ant(self) for _ in range(m)]
+
+        self.beta = beta
+        self.alpha = 0.1
+        self.q_0 = q_0
+
+    def __str__(self):
+        # TODO
+        result = ""
+        for ant in self.ants:
+            result += str(ant)
+        return result
+
+    # Returns the cost of the solution produced by 
+    # the nearest neighbour heuristix
+    def nearestNearbourHeuristic(self):
+        costs = np.zeros(self.n)
+
+        # TODO
+        #Avec comme point de départ chacun des sommets du graphe
+        for idxDepart in range(self.n):          
+            cost = 0
+            idxActuel = idxDepart
+            idxVisites =  np.zeros(self.n)
+            idxVisites[idxActuel] = 1
+            nbIdxVisites = 1
+
+            #On visite tous les points
+            while nbIdxVisites < self.n:
+                #Considérer tous les sommets pour trouver le plus proche
+                idxMin = -1
+                valMin = sys.maxsize
+                for idxConsidere in range(self.n):
+                    if idxVisites[idxConsidere] == 0 and self.adjMat[idxActuel][idxConsidere] < valMin:
+                        valMin = self.adjMat[idxActuel][idxConsidere]
+                        idxMin = self.idxConsidere
+                
+                #On visite le plus proche voisin et on ajoute le coût au cost
+                cost += self.adjMat[idxActuel][idxMin]
+                idxVisites[idxMin] = 1
+                nbIdxVisites += 1
+                idxActuel = idxMin
+                
+            #Lorsque tous les points sont visités, on retourne au point de départ
+            cost += self.adjMat[idxActuel][idxDepart]
+            costs[idxDepart] = cost
+
+        #On retourne le coût minimal
+        return min(costs)
+
+    # Heuristic function
+    # Returns inverse of smallest distance between r and u
+    def eta(self, r, u):
+        # TODO
+        return 1 / self.adjMat[r][u]
+
+    def optimize(self, num_iter):
+        for _ in range(num_iter):
+            for _ in range(self.n-1):
+                for ant in self.ants:
+                    ant.move()
+            
+            #Ajouter le coût pour revenir au début
+            for ant in self.ants:
+                destination = ant.path[0]
+                # local updating
+                self.tau[ant.pos][destination] = (1 - self.alpha) * self.tau[ant.pos][destination] + self.alpha * self.tau_0
+
+                # Changement de position
+                ant.cost += self.adjMat[ant.pos][destination]
+                ant.pos = destination
+
+            #Tour d'amélioration
+            for ant in self.ants:
+                ant.tourImprovement()
+
+            min(self.ants).globalUpdate()
+
+            for ant in self.ants:
+                ant.reset(self)
+
+if __name__ == "__main__":
+    rand.seed(420)
+
+    file = open('dantzig.csv')
+    fileResult = open('result.txt','w')
+
+    adjMat = np.loadtxt(file, delimiter=",")
+
+    ant_colony = Colony(adjMat)
+
+    fileResult.write("Nearest Nearbour Heuristic Cost :  " + str(ant_colony.nearestNearbourHeuristic()) + "\n")
+
+    ant_colony.optimize(1000)
+
+    fileResult.close()

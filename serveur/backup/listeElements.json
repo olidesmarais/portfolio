@@ -1,0 +1,633 @@
+[
+ {
+   "id": 1,
+   "titre": "L'admission à l'Université de Montréal",
+   "soustitre": "Webinaires informationnels",
+   "categorie": "Communication",
+   "contexte": "Présentations réalisées dans le cadre de mon emploi en tant qu'agent à l'information et aux dossiers au Service de l'admission et du recrutement de l'Université de Montréal.",
+   "demarche": "Pour réaliser un tel webinaire, je prépare les PowerPoint, souvent en équipe. Je fais valider le contenu au besoin. Certaines séances ont récemment été enregistrées en studio. La plupart ont été fait en visio-conférence sur Zoom. La présentation laisse souvent place à une période de questions à répondre en live.",
+   "competences": [
+      "Communication orale",
+      "Vulgarisation",
+      "Tournage"
+   ],
+   "logiciels": [
+      "PowerPoint",
+      "Zoom"
+   ],
+   "date": [
+      22,
+      11,
+      2021
+   ],
+   "type": "multi",
+   "orientation": "h",
+   "source": [
+      {
+         "id": "udem_0",
+         "titre": "De l'exploration à l'admission : étudiants québécois",
+         "date": [
+            22,
+            11,
+            2021
+         ],
+         "orientation": "h",
+         "source": [
+            "video",
+            "https://youtu.be/nC7fzrjnWqU",
+            "<iframe width=\"720\" height=\"405\" src=\"https://www.youtube.com/embed/nC7fzrjnWqU\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+         ]
+      },
+      {
+         "id": "udem_1",
+         "titre": "Atelier d’aide à la demande d’admission au trimestre d'hiver 2022",
+         "date": [
+            17,
+            8,
+            2021
+         ],
+         "orientation": "h",
+         "source": [
+            "video",
+            "https://youtu.be/T2UKfR5Wk_U",
+            "<iframe width=\"720\" height=\"405\" src=\"https://www.youtube.com/embed/T2UKfR5Wk_U\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+         ]
+      },
+      {
+         "id": "udem_2",
+         "titre": "Attendre une réponse d'admission : ce qu'il faut savoir!",
+         "date": [
+            12,
+            4,
+            2021
+         ],
+         "orientation": "h",
+         "source": [
+            "video",
+            "https://youtu.be/tAEsu_6R8rs",
+            "<iframe width=\"720\" height=\"405\" src=\"https://www.youtube.com/embed/tAEsu_6R8rs\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+         ]
+      },
+       {
+         "id": "udem_3",
+         "titre": "Accepter son offre d'admission : à quoi s'attendre après",
+         "date": [
+            29,
+            4,
+            2021
+         ],
+         "orientation": "h",
+         "source": [
+            "video",
+            "https://youtu.be/gklVE9EulnA",
+            "<iframe width=\"720\" height=\"405\" src=\"https://www.youtube.com/embed/gklVE9EulnA\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+         ]
+      },
+       {
+         "id": "udem_4",
+         "titre": "Recevoir un avis de refus : quoi faire?",
+         "date": [
+            12,
+            4,
+            2021
+         ],
+         "orientation": "h",
+         "source": [
+            "video",
+            "https://youtu.be/qjtwPwyvyK4",
+            "<iframe width=\"720\" height=\"405\" src=\"https://www.youtube.com/embed/qjtwPwyvyK4\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+         ]
+      },
+       {
+         "id": "udem_5",
+         "titre": "Q et R sur l'admission pour collégiens : les plans B",
+         "date": [
+            17,
+            3,
+            2021
+         ],
+         "orientation": "h",
+         "source": [
+            "video",
+            "https://youtu.be/jEAWVwaFF5w",
+            "<iframe width=\"720\" height=\"405\" src=\"https://www.youtube.com/embed/jEAWVwaFF5w\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+         ]
+      },
+       {
+         "id": "udem_6",
+         "titre": "L’ABC de la demande d’admission Étudiants québécois",
+         "date": [
+            18,
+            2,
+            2021
+         ],
+         "orientation": "h",
+         "source": [
+            "video",
+            "https://youtu.be/Qd6A7u69JZA",
+            "<iframe width=\"720\" height=\"405\" src=\"https://www.youtube.com/embed/Qd6A7u69JZA\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+         ]
+      }
+   ]
+},
+ {
+   "id": 2,
+   "titre": "Bientôt la rentrée d'automne&nbsp;2021!",
+   "soustitre": "Vidéo promotionnelle",
+   "categorie": "Communication",
+   "contexte": "J'ai été approché par le Bureau des communications et des relations publiques de l'Université de Montréal pour figurer dans la vidéo annonçant le début de l'année scolaire 2021-2022.",
+   "demarche": "Mon rôle dans ce projet était surtout devant la caméra. Bien que j'ai fourni des idées de plan dans la planification et le jour du tournage, je n'étais pas responsable de la conception, de la captation vidéo ou du montage.",
+   "competences": [
+      "Tournage"
+   ],
+   "logiciels": [],
+   "date": [
+      23,
+      8,
+      2021
+   ],
+   "type": "simple",
+   "orientation": "h",
+   "source": [
+      "url",
+      "https://fb.watch/a92V5AN0ID/",
+      "Accéder"
+   ]
+},
+ {
+   "id": 3,
+   "titre": "Projet prévu pour l'été&nbsp;2022",
+   "soustitre": "Vidéo promotionnelle",
+   "categorie": "Animation",
+   "contexte": "Vidéo promotionnelle pour les Plans DAPEX. Le but est de solliciter la clienèle et de les stimuler à entreprendre les démarches pour leur projet de construction, d'agrandissement ou de rénovation pour l'été 2022.",
+   "demarche": "Les enregistrements audio-visuels m'ont été fournis. J'ai fait le montage dans Première Pro. J'ai travaillé le projet dans AfterEffect pour l'animer. Certains éléments animé ont été conçus dans Illustator. La finalisation du projet a été faite dans Audition où j'ai masterisé l'audio en plus d'ajouter des effets sonores libres de droits.",
+   "competences": [
+      "Communication orale",
+      "Vulgarisation",
+      "Conception",
+      "Montage",
+      "Design d'animation",
+      "Traitement sonore"
+   ],
+   "logiciels": [
+      "PhotoShop",
+      "AfterEffect",
+      "PremierePro",
+      "Illustrator",
+      "Audition"
+   ],
+   "date": [
+      18,
+      11,
+      2021
+   ],
+   "type": "simple",
+   "orientation": "v",
+   "source": [
+      "video",
+      "https://fb.watch/a92bN3URZN/",
+      "<iframe src=\"https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2F106280061821013%2Fvideos%2F274742674587179%2F&show_text=false&width=267&t=0\" width=\"267\" height=\"476\" style=\"border:none;overflow:hidden\" scrolling=\"no\" frameborder=\"0\" allowfullscreen=\"true\" allow=\"autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share\" allowFullScreen=\"true\"></iframe>"
+   ]
+},
+ {
+   "id": 4,
+   "titre": "Comment choisir son université?",
+   "soustitre": "Vidéo promotionnelle",
+   "categorie": "Communication",
+   "contexte": "Vidéo promotionnelle pour l'Université de Montréal. Le but était de présenter de quelle manière on peut procéder pour identifier l'université où on désire étudier. J'y explique par le fait même de quelle manière j'ai choisi l'Université de Montréal pour faire mes études.",
+   "demarche": "J'avais un texte qui m'était proposé, que j'ai reformulé à ma manière. Il s'agissait d'un tournage en studio avec des professionnels responsable de capter la vidéo et le son. Ils ont également fait le montage.",
+   "competences": [
+      "Communication orale",
+      "Vulgarisation",
+      "Tournage"
+   ],
+   "logiciels": [],
+   "date": [
+      13,
+      12,
+      2021
+   ],
+   "type": "simple",
+   "orientation": "h",
+   "source": [
+      "video",
+      "https://youtu.be/CNf4uWPqbt0",
+      "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/CNf4uWPqbt0\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+   ]
+},
+ {
+   "id": 5,
+   "titre": "La gande illumination du Village de Sainte-Thérèse",
+   "soustitre": "Reportage",
+   "categorie": "Communication",
+   "contexte": "Repotage sur la grande illumination du village de Sainte-Thérèse. Cet évènement organisé par la ville vise à offrir une source de diverissement surtout pour les jeunes familles et cette période de l'année. Il s'agit du lancement de la programmation de leurs activités du temps des Fêtes.",
+   "demarche": "Je me suis rendu sur le site de l'évènement avec les autorisations nécessaires pour en capter les images. J'ai également rencontrée l'organisatrice de l'évènement pour une entrevue. J'ai ensuite écrit le texte du reportage et l'ai enregistré. J'ai finalement fait le montage et l'exportation de la vidéo. ",
+   "competences": [
+      "Communication orale",
+      "Tournage",
+      "Captation vidéo",
+      "Captation sonore",
+      "Montage",
+      "Traitement sonore"
+   ],
+   "logiciels": [
+      "PremierePro"
+   ],
+   "date": [
+      17,
+      12,
+      2018
+   ],
+   "type": "simple",
+   "orientation": "h",
+   "source": [
+      "video",
+      "https://youtu.be/JCzsxQNW71M",
+      "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/JCzsxQNW71M\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+   ]
+},
+ {
+   "id": 6,
+   "titre": "Horizon sur la ville",
+   "soustitre": "Dessin de paysage",
+   "categorie": "Animation",
+   "contexte": "L'objectif était de créer un décor de ville. La perspective est construite avec trois points de fuites et des lignes d'horizon courbes.",
+   "demarche": "J'ai dessiné la ville dans PhotoShop, puis j'ai ajouté les ombrage. J'ai ensuite importer la vidéo dans AterEffect pour animer la caméra.",
+   "note": "Ce projet était mon premier contact avec AfterEffect.",
+   "competences": [
+      "Design d'animation"
+   ],
+   "logiciels": [
+      "PhotoShop",
+      "AfterEffect"
+   ],
+   "date": [
+      17,
+      12,
+      2019
+   ],
+   "type": "simple",
+   "orientation": "h",
+   "source": [
+      "video",
+      "https://youtu.be/IF66vT2hmqA",
+      "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/IF66vT2hmqA\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+   ]
+},
+ {
+   "id": 7,
+   "titre": "D'où vient le mont Royal ?",
+   "soustitre": "Série reportage",
+   "categorie": "Communication",
+   "contexte": "Ce projet avait pour simple but de produire un contenu journalistique. J'avais avec moi un mentor, <a href='https://com.umontreal.ca/repertoire-departement/charges-de-cours/charge-de-cours/in/in22066/sg/Pierre%20Guimond/' target='_blank'>Pierre Guimond</a>, qui m'a accompagné et conseillé. J'avais envie d'aborder un sujet de nature scientifique avec un média vidéo. N'ayant pas encore, à l'époque, de connaissance en animation, j'ai choisi de parer de géologie, une science à grande échelle et donc relativement captable par vidéo. C'est ainsi que j'ai choisi de me pencher sur les origines du mont Royal. Avec mon mentor, nous avons établis qu'il serait pertinent de présenter mon contenu sous la forme d'une série de reportages.",
+   "demarche": "Pendant ma semaine de vacances de l'été 2019, je suis parti mon les 10 collines montérégiennes muni d'équipement pour filmer mon aventure. J'ai rencontré les différents intervenants pour tenir des entrevues. J'ai ensuite écrit les textes et enregistré la narration en studio. Puis, j'ai réalisé le montage, les animations et les contenus nécessaires.",
+   "avertissement": "La musique d'introduction est l'œuvre de Skavenger. <a href=\"https://soundcloud.com/soundskavenger?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing\" target=\"_blank\">Découvir!</a>",
+   "note": "À noter que je n'étais qu'au balbutiment de mes apprentissages en animation lors de la réalisation de ce projet. La plupart du motion design a été fait en utilisant PowerPoint. On note néanmoins déjà mon intérêt pour ce type de média.",
+   "competences": [
+      "Communication orale",
+      "Vulgarisation",
+      "Tournage",
+      "Captation vidéo",
+      "Captation sonore",
+      "Conception",
+      "Montage",
+      "Traitement sonore"
+   ],
+   "logiciels": [
+      "PowerPoint",
+      "PhotoShop",
+      "AfterEffect",
+      "PremierePro"
+   ],
+   "date": [
+      14,
+      1,
+      2020
+   ],
+   "type": "multi",
+   "orientation": "h",
+   "source": [
+       {
+         "id": "royal_0",
+         "titre": "Sa généalogie géologique",
+         "date": [
+            14,
+            1,
+            2020
+         ],
+         "orientation": "h",
+         "source": [
+            "video",
+            "https://youtu.be/crj_WM9ylls",
+            "<iframe width=\"720\" height=\"405\" src=\"https://www.youtube.com/embed/crj_WM9ylls\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+         ]
+      },
+       {
+         "id": "royal_1",
+         "titre": "Pierre sous l'eau amassera mousse",
+         "date": [
+            14,
+            1,
+            2020
+         ],
+         "orientation": "h",
+         "source": [
+            "video",
+            "https://youtu.be/vV4vIi0EenM",
+            "<iframe width=\"720\" height=\"405\" src=\"https://www.youtube.com/embed/vV4vIi0EenM\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+         ]
+      },
+       {
+         "id": "royal_3",
+         "titre": "Voyage du centre de la Terre jusqu'aux confins de l'Univers",
+         "date": [
+            14,
+            1,
+            2020
+         ],
+         "orientation": "h",
+         "source": [
+            "video",
+            "https://youtu.be/KT5I8g4JOO8",
+            "<iframe width=\"720\" height=\"405\" src=\"https://www.youtube.com/embed/KT5I8g4JOO8\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+         ]
+      }
+   ]
+},
+ {
+   "id": 8,
+   "titre": "J'ai un ami",
+   "soustitre": "Motion design",
+   "categorie": "Animation",
+   "contexte": "L'objectif de ce projet était de créer une animation avec les mots énoncés dans l'enregistrement audio.",
+   "demarche": "J'ai conçu un moodboard dans PhotoShop et élaboré le concept. Je me suis ensuite lancé dans la réalisation du projet dans AfterEffect.",
+   "avertissement": "L'enregistrement audio a été fourni par mon enseignant dans le cadre de ce projet.",
+   "competences": [
+      "Conception",
+      "Design d'animation"
+   ],
+   "logiciels": [],
+   "date": [
+      22,
+      11,
+      2020
+   ],
+   "type": "simple",
+   "orientation": "h",
+   "source": [
+      "video",
+      "https://youtu.be/MaonUptt0sk",
+      "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/MaonUptt0sk\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+   ]
+},
+ {
+   "id": 9,
+   "titre": "Le roi des virus",
+   "soustitre": "Bande-annonce",
+   "categorie": "Animation",
+   "contexte": "Le but de ce projet était de produire une bande-annonce d'un film fictif à partir d'images vidéos trouvées sur Internet. ",
+   "demarche": "J'ai élaboré le concept et me suis lancé sur la recherche de média en ligne. En utilisant Blender, j'ai homogénéisé la fréquence d'affichage de tous ces médias. J'ai ensuite procédé au montage, incluant un peu d'animation, le tout toujours dans Blender. La narration a été travaillé dans Audition. ",
+   "avertissement": "Je ne possède pas les droits sur les médias audio-visuels utilisés dans ce projet. ",
+   "competences": [
+      "Communication orale",
+      "Captation sonore",
+      "Conception",
+      "Montage",
+      "Traitement sonore"
+   ],
+   "logiciels": [
+      "Audition",
+      "Blender"
+   ],
+   "date": [
+      8,
+      12,
+      2020
+   ],
+   "type": "simple",
+   "orientation": "h",
+   "source": [
+      "video",
+      "https://youtu.be/8fjMXDZ7sZg",
+      "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/8fjMXDZ7sZg\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+   ]
+},
+ {
+   "id": 10,
+   "titre": "Réveillon 2020",
+   "soustitre": "Bande-annonce",
+   "categorie": "Animation",
+   "contexte": "Nous le savons, le temps des Fêtes n'est récemment plus ce qu'il était. Afin de permettre à ma famille de se réunir malgré les consignes sanitaires, j'ai mis sur pieds une soirée d'activité virtuelle. Ce projet m'a servi à faire la promotion de cette soirée. ",
+   "demarche": "J'ai récolté mes médias de plusieurs manières. J'ai notamment trouvé certaines viséos sur YouTube pour lesquels j'ai adapté la fréquence d'affichage en utilisant Blender. J'ai aussi enregistré la narration et quelques effets sonores que j'ai travaillé dans Audition. D'autres effets sonores libres de droit ont été trouvés sur Internet et travaillés sur le même logiciel. J'ai réalisé le montage dans AfterEffect.",
+   "avertissement": "Je ne possède pas les droits sur les médias audio-visuels utilisés dans ce projet. ",
+   "competences": [
+      "Communication orale",
+      "Captation sonore",
+      "Conception",
+      "Montage",
+      "Design d'animation",
+      "Traitement sonore"
+   ],
+   "logiciels": [
+      "AfterEffect",
+      "Audition",
+      "Blender"
+   ],
+   "date": [
+      22,
+      12,
+      2020
+   ],
+   "type": "simple",
+   "orientation": "h",
+   "source": [
+      "video",
+      "https://youtu.be/2XI8REPsQ50",
+      "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/2XI8REPsQ50\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+   ]
+},
+ {
+   "id": 11,
+   "titre": "Sortie aux Ziptrek Treamblant en famille",
+   "soustitre": "Vidéo souvenir",
+   "categorie": "Animation",
+   "contexte": "Avec ma famille, nous sommes allés vivre l'expérience du Ziptrek Treamblant. Sur place, nous avons loué deux GoPros pour capter l'aventure. Ce projet avait pour but de créer une vidéo souvenir de la sortie. ",
+   "demarche": "À partir des images, j'ai créé un projet PremierePro pour faire le montage au ryhme de la musique. ",
+   "avertissement": "Je ne possède pas les droits de la musique  utilisée dans ce projet. ",
+   "competences": [
+      "Montage"
+   ],
+   "logiciels": [
+      "PremierePro"
+   ],
+   "date": [
+      12,
+      9,
+      2021
+   ],
+   "type": "simple",
+   "orientation": "h",
+   "source": [
+      "video",
+      "https://youtu.be/BeFlBpbZdYg",
+      "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/BeFlBpbZdYg\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+   ]
+},
+ {
+   "id": 12,
+   "titre": "Jardin de givre",
+   "soustitre": "Montage photo",
+   "categorie": "Animation",
+   "contexte": "J'ai pris la photo d'origine aux alentours de mon lieu de travail avec une pluie de verglas. Dans le cadre de ce projet, j'ai revisité cette image pour lui donner justice.",
+   "demarche": "J'ai utilisé plusieurs images trouvées en lignes en les travaillants pour les inclure dans ce montage. Le projet a été réalisé dans PhotoShop. ",
+   "avertissement": "Je ne possède pas les droits des images utilisées dans ce projet, sauf l'originale. ",
+   "competences": [
+      "Traitement d'image"
+   ],
+   "logiciels": [
+      "PhotoShop"
+   ],
+   "date": [
+      28,
+      9,
+      2019
+   ],
+   "type": "double",
+   "orientation": "v",
+   "source": [
+      "image",
+      "client/public/image/12_jardinDeGivre/12_jardinDeGivre_01.png",
+      "client/public/image/12_jardinDeGivre/12_jardinDeGivre_02.png"
+   ]
+},
+ {
+   "id": 13,
+   "titre": "Marche pour le climat à Montréal",
+   "soustitre": "Reportage",
+   "categorie": "Communication",
+   "contexte": "Une manifestation pour le climat a eu lieu à Montréal le 15 mars 2019. Nous avons décidé de prendre part au ressemblement et d'en faire un portrait.",
+   "demarche": "Nous nous sommes rendus sur les lieux de la manifestation et avons filmé tout au long de la journée. Nous avons également interviewé quelques participants. Par la suite, nous avons fait le montage et le traitement du son sur PremierePro. ",
+   "avertissement": "Je ne suis évidemment pas le narateur de ce reportage. Il s'agit de <a href='https://journalmetro.com/auteur/dflotat/' target='_blank'>David Flotat</a>, journaliste chez le Journal Métro. ",
+   "competences": [
+      "Tournage",
+      "Captation vidéo",
+      "Captation sonore",
+      "Montage",
+      "Traitement sonore"
+   ],
+   "logiciels": [
+      "PremierePro"
+   ],
+   "date": [
+      2,
+      4,
+      2019
+   ],
+   "type": "simple",
+   "orientation": "h",
+   "source": [
+      "video",
+      "https://youtu.be/BbYuxPeraeQ",
+      "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/BbYuxPeraeQ\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+   ]
+},
+ {
+   "id": 14,
+   "titre": "Créer l'impossible",
+   "soustitre": "Montage photo",
+   "categorie": "Animation",
+   "contexte": "Le but de ce projet était de faire un montage photo rendant possible quelque chose de jamais vu.",
+   "demarche": "J'ai utilisé une photo prise à l'automne près de chez moi ainsi que la photo d'un ancien collègue de travail. Les autres images proviennent d'Internet. J'ai décidé de présenter un scénario ironique inversant les rôles de l'humain et de la citrouille dans les célébrations de l'Halloween. Le montage photo a été réalisé sur PhotoShop.",
+   "avertissement": "Je ne possède pas les droits pour certaines images utilisés dans ce projet. ",
+   "competences": [
+      "Traitement d'image"
+   ],
+   "logiciels": [
+      "PhotoShop"
+   ],
+   "date": [
+      13,
+      10,
+      2019
+   ],
+   "type": "double",
+   "orientation": "v",
+   "source": [
+      "image",
+      "client/public/image/14_creerLimpossible/14_creerLimpossible_01.png",
+      "client/public/image/14_creerLimpossible/14_creerLimpossible_02.png"
+   ]
+},
+ {
+   "id": 15,
+   "titre": "Clic vidéo",
+   "soustitre": "Site Web",
+   "categorie": "Programmation",
+   "competences": [],
+   "logiciels": [
+      "Visual Studio Code",
+      "HTML",
+      "CSS",
+      "JSON",
+      "XML"
+   ],
+   "date": [
+      12,
+      12,
+      2021
+   ],
+   "type": "double",
+   "orientation": "h",
+   "source": [
+      "url",
+      "https://admission.umontreal.ca/",
+      "Accéder"
+   ]
+},
+ {
+   "id": 16,
+   "titre": "Boggle",
+   "soustitre": "Programme",
+   "categorie": "Programmation",
+   "competences": [],
+   "logiciels": [
+      "Visual Studio Code",
+      "Python"
+   ],
+   "date": [
+      15,
+      12,
+      2021
+   ],
+   "type": "double",
+   "orientation": "h",
+   "source": [
+      "texte", 
+      "client/public/texte/16_boggle/16_boggle_01.txt",
+      "client/public/texte/16_boggle/16_boggle_02.txt"
+   ]
+},
+ {
+   "id": 17,
+   "titre": "Ants",
+   "soustitre": "Programme",
+   "categorie": "Programmation",
+   "competences": [],
+   "logiciels": [
+      "Visual Studio Code",
+      "Python"
+   ],
+   "date": [
+      6,
+      12,
+      2021
+   ],
+   "type": "double",
+   "orientation": "h",
+   "source": [
+      "texte", 
+      "client/public/texte/17_fourmis/17_fourmis_01.txt",
+      "client/public/texte/17_fourmis/17_fourmis_02.txt"
+   ]
+}
+]

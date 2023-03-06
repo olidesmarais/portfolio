@@ -1,0 +1,329 @@
+/*
+ * Fichier : tp3_numeroC.cpp
+ * Auteur  : Olivier Desmarais, 20050502
+ * Cours   : IFT 1166, section A
+ * But     : Lire et manipuler les données de personnes par le biais du conteneur liste
+ * Dernière mise à jour : 7 juillet 2021
+*/
+
+#include <iostream>
+#include <iomanip>
+#include <string>
+#include <fstream>
+#include <stdlib.h>
+#include <string.h>
+#include <list>
+
+using namespace std;
+
+const int LONG_NOMPRE = 30;
+
+class Personne
+{
+  private :
+    char   sexe;
+    int    numero;
+    double taille, poids;
+    string nomPre;
+
+  public :
+    Personne(char sexe, int numero, double taille, double poids, string nomPre);
+    Personne(string);
+    Personne();
+
+    string getNomPre() ;
+    char getSexe()
+    {
+        return sexe;
+    }
+    
+    double getTaille()
+    {
+        return taille;
+    }
+    
+    double getPoids()
+    {
+        return poids;
+    }
+    void afficher();
+    
+    friend ostream& operator << (ostream&, const Personne&);
+    
+    bool operator == (const Personne& autre);
+    bool operator != (const Personne& autre);
+                  
+};
+
+Personne::Personne(char sexe, int numero, double taille, double poids,
+                      string nomPre)
+{
+    this->sexe = sexe;
+    this->numero = numero;
+    this->taille = taille;
+    this->poids = poids;
+    this->nomPre = nomPre;
+}
+
+Personne::Personne(string aChercher)
+{
+    int nbCar = aChercher.length();
+    
+    for (int i = 0 ; i < nbCar ; i++)
+        if (aChercher[i] >= 'a' && aChercher[i] <= 'z')
+            aChercher[i] += 'A' - 'a';
+    
+    for (int i = nbCar ; i < LONG_NOMPRE ; i++)
+        aChercher += ' ';
+    
+    nomPre = aChercher;
+    sexe = ' ';
+    taille = poids = 0.0;
+    numero = 0;
+}
+
+Personne::Personne()
+{
+}
+
+/* ------------------------------------------------------
+   - Auteur : Olivier Desmarais, IFT 1166               -
+   ------------------------------------------------------
+   - But : Surcharger l'opérateur '<<' pour le rendre   -
+   -       fonctionnel avec une instance de la classe   -
+   -       Personne                                     -
+   ------------------------------------------------------
+   - Dernière mise à jour : 07 07 2021                  -
+   ------------------------------------------------------
+*/
+ostream& operator << (ostream& sortie, const Personne& unePers)
+{
+    sortie.setf(ios::showpoint);
+    sortie.setf(ios :: fixed);
+    
+    sortie   << setw(30) << unePers.nomPre
+             << setw(10)  << unePers.numero
+             << setw(8) << setprecision(2) << unePers.taille
+             << setw(6) << setprecision(1) << unePers.poids
+             << setw(10) << ( unePers.sexe == 'F' ? "feminin":"masculin")
+             << endl;
+    
+    return sortie;
+}
+
+/* ------------------------------------------------------
+   - Auteur : Olivier Desmarais, IFT 1166               -
+   ------------------------------------------------------
+   - But : Surcharger l'opérateur '=' pour le rendre    -
+   -       fonctionnel avec une instance de la classe   -
+   -       Personne                                     -
+   ------------------------------------------------------
+   - Dernière mise à jour : 07 07 2021                  -
+   ------------------------------------------------------
+*/
+bool Personne::operator == (const Personne& autre)
+{
+    return nomPre == autre.nomPre;
+}
+
+/* ------------------------------------------------------
+   - Auteur : Olivier Desmarais, IFT 1166               -
+   ------------------------------------------------------
+   - But : Surcharger l'opérateur '!=' pour le rendre   -
+   -       fonctionnel avec une instance de la classe   -
+   -       Personne                                     -
+   ------------------------------------------------------
+   - Dernière mise à jour : 07 07 2021                  -
+   ------------------------------------------------------
+*/
+bool Personne::operator != (const Personne& autre)
+{
+    return nomPre != autre.nomPre;
+}
+
+/* ------------------------------------------------------
+   - Auteur : Olivier Desmarais, IFT 1166               -
+   ------------------------------------------------------
+   - But : Accéder à la valeur de nomPre d'une instance -
+   -       de la classe Personne                        -
+   ------------------------------------------------------
+   - Dernière mise à jour : 07 07 2021                  -
+   ------------------------------------------------------
+*/
+string Personne::getNomPre()
+{
+    return nomPre;
+}
+
+/* ------------------------------------------------------
+   - Auteur : N/A                                       -
+   ------------------------------------------------------
+   - But : Afficher les propriétés d'une instance de la -
+   -       classe Personne                              -
+   ------------------------------------------------------
+   - Dernière mise à jour : N/A                         -
+   ------------------------------------------------------
+*/
+void Personne::afficher()
+{
+        cout.setf(ios::showpoint);
+        cout.setf(ios :: fixed);
+        
+        cout   << setw(30) << nomPre
+               << setw(10)  << numero
+               << setw(8) << setprecision(2) << taille
+               << setw(6) << setprecision(1) << poids
+               << setw(10) << ( sexe == 'F' ? "feminin":"masculin")
+               << endl;
+}
+
+// comme stof string to float
+float strtof(string chaineCpp)
+{
+    return atof(chaineCpp.c_str());
+}
+
+// comme stoi  string to integer
+int strtoi(string chaineCpp)
+{
+    return atoi(chaineCpp.c_str());
+}
+
+/* ------------------------------------------------------
+   - Auteur : Olivier Desmarais, IFT 1166               -
+   ------------------------------------------------------
+   - But : Permet de lire les propriétés de personnes   -
+   -       à partir d'un fichier texte et introduire    -
+   -       ces personnes dans une liste                 -
+   ------------------------------------------------------
+   - Dernière mise à jour : 07 07 2021                  -
+   ------------------------------------------------------
+*/
+void lireRemplir(const char nomALire[], list<Personne> & liste)
+ {
+     ifstream  aLire (nomALire, ios::in); // localiser et ouvrir pour la lecture
+
+     string ligneLue;
+     
+     while (  getline(aLire, ligneLue, '\n'))
+     {
+        char sexe = ligneLue[30];
+        float taille = strtof(ligneLue.substr(37,4));
+        float poids  = strtof(ligneLue.substr(51,5));
+        int numero = strtoi(ligneLue.substr(64,4));
+        string nomPre = ligneLue.substr(0, 30);
+           
+        liste.push_back(Personne(sexe, numero, taille, poids, nomPre));
+    }
+    aLire.close();
+}
+    
+/* ------------------------------------------------------
+   - Auteur : Olivier Desmarais, IFT 1166               -
+   ------------------------------------------------------
+   - But : Afficher les X premières instances de la     -
+   -       classe personnes contenues dans la liste     -
+   ------------------------------------------------------
+   - Dernière mise à jour : 07 07 2021                  -
+   ------------------------------------------------------
+*/
+void afficher(list<Personne> liste, int nombre)
+{
+    int n = 0;
+    cout << "\nInformations des " << nombre
+         << " premières personnes des la liste :\n";
+    for(list<Personne>::iterator il = liste.begin() ; n < nombre ; il++)
+    {
+        cout << setw(3) << n++ << ") " << *il;
+    }
+    cout << setw(3) << n++ << ") ..." << endl;
+}
+
+/* ------------------------------------------------------
+   - Auteur : Olivier Desmarais, IFT 1166               -
+   ------------------------------------------------------
+   - But : Afficher instances de la classe personne     -
+   -       contenues dans la liste dont le nom          -
+   -       correspond à celui rechercé                  -
+   ------------------------------------------------------
+   - Dernière mise à jour : 07 07 2021                  -
+   ------------------------------------------------------
+*/
+void afficher(list<Personne> liste, string nom)
+{
+    int n = 0;
+    cout << "\nInformations des personnes nommées " << nom
+         << " dans la liste :\n";
+    
+    Personne recherchee(nom);
+    
+    for (list<Personne>::iterator il = liste.begin() ; il != liste.end() ; il++)
+    {
+        if (*il == recherchee)
+            cout << setw(3) << n++ << ") " << *il;
+        
+        n++;
+    }
+}
+
+/* ------------------------------------------------------
+   - Auteur : Olivier Desmarais, IFT 1166               -
+   ------------------------------------------------------
+   - But : Compter le nombre d'instances de la classe   -
+   -       personne contenues dans la liste             -
+   ------------------------------------------------------
+   - Dernière mise à jour : 07 07 2021                  -
+   ------------------------------------------------------
+*/
+void compter (list<Personne> liste, int & n)
+{
+    n = 0;
+    for (list<Personne>::iterator il = liste.begin() ; il != liste.end() ; il++)
+    {
+        n++;
+    }
+}
+
+/* ------------------------------------------------------
+   - Auteur : Olivier Desmarais, IFT 1166               -
+   ------------------------------------------------------
+   - But : Supprimer une instance de la classe personne -
+   -       à partir de son nom dans la liste            -
+   ------------------------------------------------------
+   - Dernière mise à jour : 07 07 2021                  -
+   ------------------------------------------------------
+*/
+void supprimer (list<Personne>& liste, string nom)
+{
+    Personne aSupprimer(nom);
+    list<Personne>::iterator il = find(liste.begin(), liste.end(), aSupprimer);
+
+    if (il != liste.end())
+    {
+        liste.erase(il);
+        
+    } else
+        cout << "Aucune personne ne porte le nom " << aSupprimer << endl;
+}
+    
+int main() {
+      
+    list<Personne> liste;
+    
+    lireRemplir("met_e21.txt", liste);
+    
+    int nbPers;
+    compter(liste, nbPers);
+                
+    cout << "Il y a " << nbPers << " personne(s) dans la liste de personnes" << endl;
+    
+    afficher(liste, 8);
+    
+    afficher(liste, "Robitaille Suzanne");
+    
+    supprimer (liste, "Jalbert Lyne");
+    
+    afficher(liste, 11);
+    
+    return 0;
+}
