@@ -16,7 +16,7 @@ function requetes() {
             // console.log(listeElements);
             listeElementsDisponibles = true;
             nbElements = listeElements.length;
-            determinerTailleEcran();
+            //determinerTailleEcran();
             afficherOptionsFiltres();
             filtrerListe();
             construire_elements();
