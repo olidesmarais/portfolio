@@ -2,7 +2,10 @@ function afficherVideo (idx, contenu, parent) {
     let div = document.createElement('div');
     parent.append(div);
 
+
     let largeur = div.offsetWidth; 
+    // console.log(contenu);
+    // console.log(contenu.hauteur);
     if (contenu.orientation == 'vertical')
         largeur /= 2;
     else
@@ -17,6 +20,7 @@ function afficherVideo (idx, contenu, parent) {
         if (idx == 0)
             div.classList.add('active');
     }
+    console.log(`<iframe ${xml} width=\"${largeur}\" height=\"${hauteur}\"></iframe>`);
 
     div.innerHTML = `<iframe ${xml} width=\"${largeur}\" height=\"${hauteur}\"></iframe>`;
     
