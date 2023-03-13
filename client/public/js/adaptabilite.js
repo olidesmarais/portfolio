@@ -68,36 +68,35 @@ document.addEventListener("DOMContentLoaded", function(){
                 const titre2 = document.getElementById('titre2');
                 const titre3 = document.getElementById('titre3');
     
-                titre1. 
     
-                //Parcourir les styles sheets
-                // for (let styleSheet of document.styleSheets) {
-                //     //Identifier la styleSheet 'style.css'
-                //     if (styleSheet.href.includes('client/public/css/style.css')) {
-                //         // Parcourir les règles
-                //         for (let rule of styleSheet.cssRules) {
-                //             // switch(rule.selectorText) {
-                //             //     case '.test':
-                //             //         if (rule.selectorText.includes('header'))
-                //             //             rule.style.fontSize = (pas_lettres) + 'px';
-                //             //         else
-                //             //             rule.style.backgroundColor = 'rgb(194, 204, 145';
-                //             //         break;
-                //             // }
-                //             if (rule.selectorText.includes('header')) {
-                //                 console.log('includes');
-                //                 console.log('rule');
-                //                 console.log(rule);
-                //                 if (rule.selectorText.includes('h1')) {
-                //                     pas_lettres = (body.offsetWidth - 16) / 7;
-                //                     rule.style.fontSize = (pas_lettres - pas_lettres * 0.1) + 'px';
-                //                 // rule.style.backgroundColor = 'black';
-                //                 //console.log(rule);
-                //                 }
-                //             }
-                //         }
-                //     }
-                // }
+                // Parcourir les styles sheets
+                for (let styleSheet of document.styleSheets) {
+                    //Identifier la styleSheet 'style.css'
+                    if (styleSheet.href.includes('client/public/css/style.css')) {
+                        // Parcourir les règles
+                        for (let rule of styleSheet.cssRules) {
+                            // switch(rule.selectorText) {
+                            //     case '.test':
+                            //         if (rule.selectorText.includes('header'))
+                            //             rule.style.fontSize = (pas_lettres) + 'px';
+                            //         else
+                            //             rule.style.backgroundColor = 'rgb(194, 204, 145';
+                            //         break;
+                            // }
+                            if (rule.selectorText.includes('header')) {
+                                console.log('includes');
+                                console.log('rule');
+                                console.log(rule);
+                                if (rule.selectorText.includes('h1')) {
+                                    pas_lettres = (body.offsetWidth - 16) / 7;
+                                    rule.style.fontSize = (pas_lettres - pas_lettres * 0.1) + 'px';
+                                // rule.style.backgroundColor = 'black';
+                                //console.log(rule);
+                                }
+                            }
+                        }
+                    }
+                }
     
     
                 
