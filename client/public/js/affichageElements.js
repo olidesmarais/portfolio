@@ -4,9 +4,9 @@ let liste_divs = [];
 
 // Reconstrction du DOM lors d'un changement à 
 // la taille de la fenêtre
-window.addEventListener('resize', function() {
-    construire_elements();
-});
+// window.addEventListener('resize', function() {
+//     construire_elements();
+// });
 
 function afficherElements() {
     let sectionElements = document.getElementById("elements");
