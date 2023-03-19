@@ -15,7 +15,7 @@ window.addEventListener('resize', () => {
             set_police();
             afficherElements();
         })(),
-        500
+        1000
     );
     
 });
@@ -23,4 +23,5 @@ window.addEventListener('resize', () => {
 document.addEventListener("DOMContentLoaded", function(){
     
     set_police();
+    
 });

@@ -31,12 +31,12 @@ nav h3 {
 
 header h4,
 nav h4 {
-    font-size: calc(var(--width)/35);
+    font-size: calc(var(--width)/45);
 }
 
 header h5,
 nav h5 {
-    font-size: calc(var(--width)/45);
+    font-size: calc(var(--width)/55);
 }
 
 .allignementDroite {
@@ -52,17 +52,25 @@ nav h5 {
     margin-bottom: 30vh;
 }
 
-.headerTexte {
-    margin-top: 20%;
-    margin-bottom: 10%;
+#headerTexte {
+    margin-top: 30vh;
+    margin-bottom: 30vh;
 }
 
 nav {
     color: #495057;
 }
 
-.txtNav {
-    padding: 4% 20% 3% 27%;
+nav a {
+    font-size:calc(var(--width) / 52);
+}
+
+#txtNav {
+    padding: 30vh 20vw;
+}
+
+#nav-criteres {
+    padding: 10vh 20vw;
 }
 
 .nav-item {
