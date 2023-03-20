@@ -107,13 +107,6 @@ nav a {
     margin-right: auto;
 }
 
-/*.sticky {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0px;
-    z-index:1;
-}*/
-
 .accordion-button,
 .accordion-button:focus,
 .accordion-button:not(.collapsed) {
@@ -124,14 +117,6 @@ nav a {
     transition: none;
     background-color: white !important;
 }
-
-/*.goupeCheckbox input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-}*/
 
 input:checked {
     background-color: #495057;
@@ -160,20 +145,11 @@ input:checked {
     padding: 5%;
 }
 
-main img {
+/* main img {
     width: 630px;
     height: 840px;
-}
+} */
 
-/*.card-header {
-    padding-left: 15px;
-    color: white; 
-    background-color: #6c757d;
-}*/
-
-/*.card-title {
-    padding: 1% 20%;
-}*/
 
 .bullet-point {
     /*width: 28%;*/
@@ -191,10 +167,21 @@ main img {
 
 .card-header-simple {
     display: inline-block;
-    width: 49%;
+    /* width: 49%; */
     text-align: right;
     vertical-align: top;
 }
+
+@media screen and (min-width:1150px) {
+    .card-header-simple {
+        width: 49%;
+    }
+    .card-body-simple {
+        width: 49%;
+    }
+}
+
+
 
 .card-title-simple {
     margin: 15% 0%;
@@ -202,7 +189,7 @@ main img {
 
 .card-body-simple {
     display: inline-block;
-    width: 49%;
+    /* width: 49%; */
     padding-left: 10%;
 }
 
