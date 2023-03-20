@@ -1,9 +1,5 @@
-html {
-    font-size: 1em;
-}
-
 :root {
-    --width: 20px;
+    font-size: 1em;
 }
 
 header {
@@ -37,6 +33,24 @@ nav h4 {
 header h5,
 nav h5 {
     font-size: calc(var(--width)/55);
+}
+
+nav p {
+    font-size: calc(var(--width)/60);
+}
+
+nav label {
+    font-size: calc(var(--width)/70);
+}
+
+nav input {
+    width: calc(var(--width)/100);
+    height: calc(var(--width)/100);
+}
+
+#filtreCompetences,
+#filtreLogiciels {
+    line-height: calc(var(--width)/0.5vh);
 }
 
 .allignementDroite {
