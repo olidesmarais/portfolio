@@ -13,6 +13,7 @@ window.addEventListener('resize', () => {
     resizeTimer = setTimeout(
         finResize = (() => {
             set_police();
+            construire_elements();
             afficherElements();
         })(),
         1000
