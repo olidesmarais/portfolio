@@ -1,31 +1,56 @@
-html {
+:root {
     font-size: 1em;
 }
 
 header {
-    margin-right: 25%;
-    margin-left: 23%
+    /* margin-right: 25%;
+    margin-left: 23% */
+    margin: auto 20vw;
 }
 
-h1 {
-    font-size: 8rem;
+header h1,
+nav h1 {
+    /* font-size: 8rem; */
     /*font-size: 800%;*/
+    font-size: calc(var(--width)/9);
 }
 
-h2 {
-    font-size: 500%;
+header h2,
+nav h2 {
+    font-size: calc(var(--width)/14);
 }
 
-h3 {
-    font-size: 350%;
+header h3,
+nav h3 {
+    font-size: calc(var(--width)/22);
 }
 
-h4 {
-    font-size: 200%;
+header h4,
+nav h4 {
+    font-size: calc(var(--width)/45);
 }
 
-h5 {
-    font-size: 130%;
+header h5,
+nav h5 {
+    font-size: calc(var(--width)/55);
+}
+
+nav p {
+    font-size: calc(var(--width)/60);
+}
+
+nav label {
+    font-size: calc(var(--width)/70);
+}
+
+nav input {
+    width: calc(var(--width)/100);
+    height: calc(var(--width)/100);
+}
+
+#filtreCompetences,
+#filtreLogiciels {
+    line-height: calc(var(--width)/0.5vh);
 }
 
 .allignementDroite {
@@ -36,22 +61,32 @@ h5 {
     text-align: center;
 }
 
-.headerTitre {
-    margin-top: 20%;
-    margin-bottom: 30%;
+#headerTitre {
+    margin-top: 30vh;
+    margin-bottom: 30vh;
 }
 
-.headerTexte {
-    margin-top: 20%;
-    margin-bottom: 10%;
+#headerTexte {
+    margin-top: 30vh;
+    margin-bottom: 30vh;
 }
 
-nav{
+nav {
     color: #495057;
 }
-.txtNav {
-    padding: 4% 20% 3% 27%;
+
+nav a {
+    font-size:calc(var(--width) / 52);
 }
+
+#txtNav {
+    padding: 30vh 20vw;
+}
+
+#nav-criteres {
+    padding: 10vh 20vw;
+}
+
 .nav-item {
     min-width: 25%;
     /*float: left;*/
@@ -64,6 +99,7 @@ nav{
     font-size: 200%;
     background-color: white;
 }
+
 .navbar-nav {
     width: 100%;
     margin-left: auto;
@@ -77,7 +113,9 @@ nav{
     z-index:1;
 }*/
 
-.accordion-button, .accordion-button:focus, .accordion-button:not(.collapsed) {
+.accordion-button,
+.accordion-button:focus,
+.accordion-button:not(.collapsed) {
     color: #495057;
     border: none;
     box-shadow: none;
@@ -101,7 +139,7 @@ input:checked {
 .active {
     border-style: solid;
     border-width: 3px;
-    border-color: rgba(0,0,0,.55);
+    border-color: rgba(0, 0, 0, .55);
     font-weight: bold;
 }
 
@@ -150,7 +188,7 @@ main img {
  * prog = double
  */
 
- .card-header-simple {
+.card-header-simple {
     display: inline-block;
     width: 49%;
     text-align: right;
@@ -214,7 +252,7 @@ main img {
     display: inline-block;
     width: 49%;
     vertical-align: middle;
-    text-align:left;
+    text-align: left;
 }
 
 .card-complement-multi {
@@ -234,7 +272,8 @@ main img {
     background-color: #6c757d;
 }
 
-.carousel-control-next, .carousel-control-prev {
+.carousel-control-next,
+.carousel-control-prev {
     width: 120px;
 }
 
@@ -260,7 +299,7 @@ main .active {
 }
 
 .fonce {
-    background-color: rgba(var(--bs-light-rgb),var(--bs-bg-opacity))!important;
+    background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
 }
 
 .card-title-double {
@@ -288,7 +327,7 @@ main .active {
     margin: 3% auto 0 0;
 }
 
-.card-text-double{
+.card-text-double {
     width: 80%;
     margin: 3% auto;
 }
@@ -297,24 +336,30 @@ main .active {
     margin-bottom: 3%;
 }
 
-.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited {
     background-color: #adb5bd !important;
     border-color: #6c757d !important;
-    font-size:larger;
+    font-size: larger;
 }
 
 .card-complement-double textarea {
     width: 90%;
     height: 700px;
-    font-size:10px;
+    font-size: 10px;
 }
 
 .cache {
     display: none;
 }
 
-p a, p a:hover, p a:active, p a:visited {
-    color:#6c757d;
+p a,
+p a:hover,
+p a:active,
+p a:visited {
+    color: #6c757d;
     font-weight: bold;
 }
 
@@ -323,15 +368,17 @@ p a:hover {
 }
 
 .footer {
-    color: white !important; 
+    color: white !important;
     background-color: #6c757d;
     text-align: center;
     padding: 3% 0%;
 }
 
-.disclamer-simple, .disclamer-double, .disclamer-multi {
+.disclamer-simple,
+.disclamer-double,
+.disclamer-multi {
     /*width: 80%;*/
-    color:grey;
+    color: grey;
     text-align: center;
     margin: 2% auto;
 }
@@ -358,7 +405,7 @@ p a:hover {
 }
 
 .btn-url {
-    margin : 15%;
+    margin: 15%;
 }
 
 /*.fa {
