@@ -37,6 +37,7 @@ nav h5 {
 
 nav p {
     font-size: calc(var(--width)/60);
+    margin-bottom: 1em;
 }
 
 nav label {
