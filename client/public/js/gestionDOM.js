@@ -14,7 +14,8 @@ function ajouterEnfants(element, type, nbEnfants, tabClasses) {
         ajouterClasse(div, [nomClasse]);
 
         element.appendChild(div);
+        console.log(div);
     }
 
-    return element.childNodes;
+    return element;
 }

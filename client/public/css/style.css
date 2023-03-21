@@ -165,14 +165,18 @@ input:checked {
  * prog = double
  */
 
-.card-header-simple {
+.card-header {
+    background-color: inherit;
+    border-bottom: inherit;
     display: inline-block;
-    /* width: 49%; */
+}
+
+.simple .card-header {
     text-align: right;
     vertical-align: top;
 }
 
-@media screen and (min-width:1150px) {
+@media screen and (min-width:800px) {
     .card-header-simple {
         width: 49%;
     }

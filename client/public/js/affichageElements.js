@@ -70,7 +70,21 @@ function construire_elements() {
         
 
         //Création des card-header et card-body
-        ajouterEnfants(divContenu, contenu.dimension, 2, ['card-header-', 'card-body-']);
+        //ajouterEnfants(divContenu, contenu.dimension, 2, ['card-header-', 'card-body-'])[0];
+
+        divContenu.append(
+            (() => {
+                const header = document.createElement('div');
+                header.classList = 'card-header';
+                return header;
+            })(),
+            (() => {
+                const body = document.createElement('div');
+                body.classList = 'card-body';
+                return body;
+            })(),
+        );
+
 
         //Remplissage card-header
         ajouterEnfants(divContenu.childNodes[0], contenu.dimension, 2, ['card-title-', 'card-resume-']);
