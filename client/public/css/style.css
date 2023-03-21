@@ -136,13 +136,19 @@ input:checked {
     width: 49%;
 }
 
-.card {
+/* .card {
     margin: 5% 5% 5% 5%;
+    
+} */
+
+h3 {
+    font-size: 3em;
 }
 
 .contenu {
-    padding-bottom: 5%;
+    /* padding-bottom: 5%; */
     padding: 5%;
+    border: inherit;
 }
 
 /* main img {
@@ -176,40 +182,38 @@ input:checked {
     vertical-align: top;
 }
 
-@media screen and (min-width:800px) {
-    .card-header-simple {
-        width: 49%;
-    }
-    .card-body-simple {
-        width: 49%;
-    }
-}
-
-
-
-.card-title-simple {
+.simple .card-title {
     margin: 15% 0%;
 }
 
-.card-body-simple {
+.simple .card-body {
     display: inline-block;
     /* width: 49%; */
     padding-left: 10%;
 }
 
-.card-resume-simple {
+.simple .card-resume {
     padding-left: 14%;
     padding-bottom: 1%;
 }
 
-.card-complement-simple {
+.simple .card-complement {
     padding-top: 1%;
 }
 
-.card-intertitre-simple {
+.simple .card-intertitre {
     text-align: left;
     margin-bottom: -1%;
     margin-top: 4%;
+}
+
+@media screen and (min-width:800px) {
+    .simple .card-header {
+        width: 49%;
+    }
+    .simple .card-body {
+        width: 49%;
+    }
 }
 
 .card-text {

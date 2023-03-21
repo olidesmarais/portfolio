@@ -61,7 +61,7 @@ function construire_elements() {
         divContenu.setAttribute('id', contenu.id_element);
         sectionElements.appendChild(divContenu);
         
-        divContenu.classList.add( 'contenu', 'text-center');
+        divContenu.classList.add( 'contenu', 'text-center', contenu.dimension);
 
         if (fondPale)
             divContenu.classList.add('pale');
@@ -76,6 +76,22 @@ function construire_elements() {
             (() => {
                 const header = document.createElement('div');
                 header.classList = 'card-header';
+                header.append(
+                    (() => {
+                        let titre = document.createElement('div');
+                        titre.classList = 'card-title';
+                        titre.innerHTML = remplirTitre(contenu);
+                        return titre;
+                    })(),
+                    (() => {
+                        let resume = document.createElement('div');
+                        resume.classList = 'card-resume';
+                        resume.innerHTML = remplirResume(contenu);
+                        return resume;
+                    })()
+                );
+
+
                 return header;
             })(),
             (() => {
@@ -85,11 +101,10 @@ function construire_elements() {
             })(),
         );
 
-
         //Remplissage card-header
-        ajouterEnfants(divContenu.childNodes[0], contenu.dimension, 2, ['card-title-', 'card-resume-']);
-        divContenu.childNodes[0].childNodes[0].innerHTML = remplirTitre(contenu);
-        divContenu.childNodes[0].childNodes[1].innerHTML = remplirResume(contenu);
+        // ajouterEnfants(divContenu.childNodes[0], contenu.dimension, 2, ['card-title-', 'card-resume-']);
+        // divContenu.childNodes[0].childNodes[0].innerHTML = remplirTitre(contenu);
+        // divContenu.childNodes[0].childNodes[1].innerHTML = remplirResume(contenu);
         
         remplir_texte( 'contexte', contenu, divContenu.childNodes[1]);
 
@@ -365,7 +380,7 @@ function remplir_texte( texte, contenu, parent) {
     parent.append(
         h5 = (() => {
             const h5 = document.createElement('h5');
-            h5.setAttribute('class', 'card-intertitre-' + contenu.dimension);
+            h5.setAttribute('class', 'card-intertitre');
             h5.innerHTML = titre;
 
             return h5;
