@@ -255,52 +255,52 @@ function remplirMedia(contenu, divBody){
     //divBody.append(div_complement);
 }
 
- function remplirDouble(contenu, divBody) {
-    //return null;
-    let body = '';
+//  function remplirDouble(contenu, divBody) {
+//     let body = '';
 
-    body += '<h5 class="card-intertitre-double">Contexte</h5><p class="card-text-double">' + contenu.contexte + '</p>';
-    let tabAlt = ['avant', 'après'];
-    let tabTxt = ['le code', 'le résultat'];
+//     body += '<h5 class="card-intertitre">Contexte</h5><p class="card-text">' + contenu.contexte + '</p>';
+//     let tabAlt = ['avant', 'après'];
+//     let tabTxt = ['le code', 'le résultat'];
 
-    for (let idx = 0 ; idx < 2 ; idx++) {
-        body += '<div class="card-complement-double">';
-        if (contenu.source[0] == 'texte')
-            body += afficherTexte(idx, tabTxt[idx]);
-        if (contenu.source[0] == 'image')
-            body += afficherImage(contenu.source[idx + 1], tabAlt[idx]);
-        if (contenu.source[0] == 'url')    
-            body += afficherUrl(contenu, idx, false);
-        body += '</div>';
-    }
+//     for (let idx = 0 ; idx < 2 ; idx++) {
+//         body += '<div class="card-complement">';
+//         if (contenu.source[0] == 'texte')
+//             body += afficherTexte(idx, tabTxt[idx]);
+//         if (contenu.source[0] == 'image')
+//             body += afficherImage(contenu.source[idx + 1], tabAlt[idx]);
+//         if (contenu.source[0] == 'url')    
+//             body += afficherUrl(contenu, idx, false);
+//         body += '</div>';
+        
+//     }
 
-     body += '<h5 class="card-intertitre-double">Démarche</h5><p class="card-text-double">' + contenu.demarche + '</p>';
+//      body += '<h5 class="card-intertitre">Démarche</h5><p class="card-text">' + contenu.demarche + '</p>';
 
-     divBody.innerHTML = body;
- }
+//      divBody.innerHTML = body;
+//  }
 
- function remplirMulti(contenu, divBody) {
-    body = '';
+//  function remplirMulti(contenu, divBody) {
+//     body = '';
 
-    body += `
-                <div class="card-complement-multi">
-                    <h5 class="card-intertitre-multi">Contexte</h5>
-                    <p class="card-text">${contenu.contexte}</p>
-                 </div>
-            `
+//     body += `
+//                 <div class="card-complement-multi">
+//                     <h5 class="card-intertitre-multi">Contexte</h5>
+//                     <p class="card-text">${contenu.contexte}</p>
+//                  </div>
+//             `
 
-    body += affichercarouselle(contenu.source);
+//     body += affichercarouselle(contenu.source);
 
-    body += `
-                <div class="card-complement-multi">
-                    <h5 class="card-intertitre-multi">Démarche</h5>
-                    <p class="card-text">${contenu.demarche}</p>
-                 </div>
+//     body += `
+//                 <div class="card-complement-multi">
+//                     <h5 class="card-intertitre-multi">Démarche</h5>
+//                     <p class="card-text">${contenu.demarche}</p>
+//                  </div>
 
-            `
+//             `
 
-    divBody.innerHTML = body;
- }
+//     divBody.innerHTML = body;
+//  }
 
  function afficherDate (contenu) {
     let jour = String(contenu.jour);
@@ -375,8 +375,6 @@ function remplir_texte( texte, contenu, parent) {
     else
         titre = '';
 
-
-
     parent.append(
         h5 = (() => {
             const h5 = document.createElement('h5');
@@ -389,7 +387,6 @@ function remplir_texte( texte, contenu, parent) {
             const p = document.createElement('p');
             p.setAttribute('class', 'card-text');
             p.innerHTML = contenu[texte];
-
             return p;
         })()
     );

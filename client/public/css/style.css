@@ -141,15 +141,9 @@ input:checked {
     
 } */
 
-h3 {
-    font-size: 3em;
-}
 
-.contenu {
-    /* padding-bottom: 5%; */
-    padding: 5%;
-    border: inherit;
-}
+
+
 
 /* main img {
     width: 630px;
@@ -165,17 +159,48 @@ h3 {
     vertical-align: top;
 }
 
-/* À changer :
- * left = simple
- * top = multi
- * prog = double
- */
+/* Règles pour les cartes de contenu */
+
+.contenu {
+    /* padding-bottom: 5%; */
+    padding: 5%;
+    border: inherit;
+}
+
+.pale {
+    background-color: white;
+    color: #495057;
+}
+
+.fonce {
+    background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.contenu h3 {
+    font-size: 3em;
+}
 
 .card-header {
     background-color: inherit;
     border-bottom: inherit;
     display: inline-block;
 }
+
+.card-text {
+    text-align: left;
+    padding: 2% 0;
+}
+
+.date {
+    font-weight: normal;
+    text-align: center;
+}
+
+.card-contexte {
+    text-align: right;
+}
+
+/* Contenu simple */
 
 .simple .card-header {
     text-align: right;
@@ -210,39 +235,83 @@ h3 {
 @media screen and (min-width:800px) {
     .simple .card-header {
         width: 49%;
+        display: inline-block;
     }
     .simple .card-body {
         width: 49%;
     }
 }
 
-.card-text {
+/* Contenu double */
+
+.double .card-header {
+    display: block;
+}
+
+.double .card-title {
+    margin-bottom: 3%;
+}
+
+.double .card-body {
+    width: 100%;
+    padding: 0 10%;
+}
+
+.double .card-body p {
     text-align: left;
-    padding: 2% 0;
 }
 
-.date {
-    font-weight: normal;
-    text-align: center;
+.double .card-complement {
+    width: 49%;
+    display: inline-block;
+    vertical-align: top;
 }
 
-.card-contexte {
-    text-align: right;
+.double .card-intertitre {
+    text-align: left;
+    width: 80%;
+    margin: 3% auto 0 0;
 }
 
-.card-title-multi {
+.double .card-text {
+    width: 80%;
+    margin: 3% auto;
+}
+
+.double .card-complement a {
+    margin-bottom: 3%;
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited {
+    background-color: #adb5bd !important;
+    border-color: #6c757d !important;
+    font-size: larger;
+}
+
+.card-complement-double textarea {
+    width: 90%;
+    height: 700px;
+    font-size: 10px;
+}
+
+/* Contenu multi */
+
+.multi .card-title {
     margin: 6% 0%;
     display: inline-block;
     width: 49%;
     text-align: right;
 }
 
-.card-body-multi {
+.multi .card-body {
     display: inline-block;
     width: 80%;
 }
 
-.card-resume-multi {
+.multi .card-resume {
     padding-left: 14%;
     padding-bottom: 1%;
     display: inline-block;
@@ -251,14 +320,16 @@ h3 {
     text-align: left;
 }
 
-.card-complement-multi {
+.multi .card-complement {
     padding-top: 1%;
 }
 
-.card-intertitre-multi {
+.multi .card-intertitre {
     text-align: left;
     margin-bottom: -2%;
 }
+
+/* Règles carousel */
 
 .carousel-indicators {
     bottom: -25px;
@@ -289,63 +360,7 @@ main .active {
     margin-bottom: -0.3%;
 }
 
-.pale {
-    background-color: white;
-    color: #495057;
-}
 
-.fonce {
-    background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
-}
-
-.card-title-double {
-    margin-bottom: 3%;
-}
-
-.card-body-double {
-    width: 100%;
-    padding: 0 10%;
-}
-
-.card-body-double p {
-    text-align: left;
-}
-
-.card-complement-double {
-    width: 49%;
-    display: inline-block;
-    vertical-align: top;
-}
-
-.card-intertitre-double {
-    text-align: left;
-    width: 80%;
-    margin: 3% auto 0 0;
-}
-
-.card-text-double {
-    width: 80%;
-    margin: 3% auto;
-}
-
-.card-complement-double a {
-    margin-bottom: 3%;
-}
-
-.btn-primary,
-.btn-primary:hover,
-.btn-primary:active,
-.btn-primary:visited {
-    background-color: #adb5bd !important;
-    border-color: #6c757d !important;
-    font-size: larger;
-}
-
-.card-complement-double textarea {
-    width: 90%;
-    height: 700px;
-    font-size: 10px;
-}
 
 .cache {
     display: none;

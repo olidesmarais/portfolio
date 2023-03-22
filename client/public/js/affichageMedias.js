@@ -155,8 +155,8 @@ function afficherUrl(idx, contenu, noSource, isSingle) {
     let classes = "btn btn-primary";
     if (isSingle)
         classes += " btn-url";
-
-    return `
+    
+        return `
         <a href='${listeElements[id].specifique[idx].url}' target='_blank' class='${classes}'>
             ${listeElements[id].specifique[idx].texte}
         </a>
