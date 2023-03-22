@@ -172,7 +172,7 @@ function remplirResume(contenu) {
 
     //Compétences
     if (contenu.competences.length > 0) {
-        resultat  +=  '<ul class="bullet-point" style="margin-right:14%;">';
+        resultat  +=  '<ul class="bullet-point" ">'; // style="margin-right:14%;
         resultat += '<h4>Compétences</h4>';
         for (let competence of contenu.competences) {
             if (competence)

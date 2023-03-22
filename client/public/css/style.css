@@ -1,5 +1,5 @@
 :root {
-    font-size: 1em;
+    font-size: 16px;
 }
 
 header {
@@ -49,6 +49,10 @@ nav input {
     height: calc(var(--width)/100);
 }
 
+.container-fluid {
+    padding:0px;
+}
+
 #filtreCompetences,
 #filtreLogiciels {
     line-height: calc(var(--width)/0.5vh);
@@ -89,7 +93,7 @@ nav a {
 }
 
 .nav-item {
-    min-width: 25%;
+    min-width: 23.78%;
     /*float: left;*/
     border-style: solid;
     border-width: 1px;
@@ -140,9 +144,14 @@ input:checked {
     display: inline-block;
     text-align: left;
     vertical-align: top;
+    margin: 0 auto auto auto;
 }
 
 /* Règles pour les cartes de contenu */
+
+main h4 {
+    font-size: 1rem;
+}
 
 .contenu {
     /* padding-bottom: 5%; */
@@ -160,7 +169,7 @@ input:checked {
 }
 
 .contenu h3 {
-    font-size: 3em;
+    font-size: 2em;
 }
 
 .card-header {
@@ -200,10 +209,16 @@ input:checked {
     padding-left: 10%;
 }
 
-.simple .card-resume {
+.card-resume {
+    padding:1%;
+    font-size: 0.8em;
+    display: flex;
+}
+
+/* .simple .card-resume {
     padding-left: 14%;
     padding-bottom: 1%;
-}
+} */
 
 .simple .card-complement {
     padding-top: 1%;
@@ -388,7 +403,8 @@ p a:hover {
     margin: 0;
     font-weight: bold;
     text-align: left;
-    width: 83%;
+    width: 75%;
+    font-size: 0.75rem;
 }
 
 .disclamer-image {
