@@ -90,7 +90,7 @@ function afficherCarousselle(sousListe) {
     let description = texte.intitule;
 
     let div = document.createElement('div');
-    div.setAttribute('class', 'card-complement-' + contenu.dimension);
+    div.setAttribute('class', 'card-complement');
 
     div.append(
         a = (() => {

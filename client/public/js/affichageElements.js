@@ -350,7 +350,7 @@ function ajouterAvertissement(contenu, divBody) {
 
 function ajouterNote(contenu, divBody) {
     let divNote = document.createElement('div');
-    let nomClass = 'disclamer-' + contenu.dimension;
+    let nomClass = 'disclamer';
     ajouterClasse(divNote, [nomClass]);
     let resultat = '';
     resultat += '<span class="disclamer-image"><i class="fa fa-plus-circle" style="font-size:235%;"></i></span>'

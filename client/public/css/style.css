@@ -137,10 +137,8 @@ input:checked {
 }
 
 .bullet-point {
-    /*width: 28%;*/
     display: inline-block;
     text-align: left;
-    /*margin: auto;*/
     vertical-align: top;
 }
 
@@ -148,7 +146,7 @@ input:checked {
 
 .contenu {
     /* padding-bottom: 5%; */
-    padding: 5%;
+    padding: 5% 10%;
     border: inherit;
 }
 
@@ -284,6 +282,10 @@ input:checked {
 
 /* Contenu multi */
 
+.multi .card-header {
+    width:100%;
+}
+
 .multi .card-title {
     margin: 6% 0%;
     display: inline-block;
@@ -370,8 +372,7 @@ p a:hover {
     padding: 3% 0%;
 }
 
-
-.disclaimer {
+.disclamer {
     color: grey;
     text-align: center;
     margin: 2% auto;
