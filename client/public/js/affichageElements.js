@@ -337,7 +337,7 @@ function retirerElementsAffichage (tabId) {
 
 function ajouterAvertissement(contenu, divBody) {
     let divAvertissement = document.createElement('div');
-    let nomClass = 'disclamer-' + contenu.dimension;
+    let nomClass = 'disclamer';
     ajouterClasse(divAvertissement, [nomClass]);
 
     let resultat = '';

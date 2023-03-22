@@ -136,21 +136,6 @@ input:checked {
     width: 49%;
 }
 
-/* .card {
-    margin: 5% 5% 5% 5%;
-    
-} */
-
-
-
-
-
-/* main img {
-    width: 630px;
-    height: 840px;
-} */
-
-
 .bullet-point {
     /*width: 28%;*/
     display: inline-block;
@@ -291,7 +276,7 @@ input:checked {
     font-size: larger;
 }
 
-.card-complement-double textarea {
+.double .card-complement textarea {
     width: 90%;
     height: 700px;
     font-size: 10px;
@@ -385,16 +370,14 @@ p a:hover {
     padding: 3% 0%;
 }
 
-.disclamer-simple,
-.disclamer-double,
-.disclamer-multi {
-    /*width: 80%;*/
+
+.disclaimer {
     color: grey;
     text-align: center;
     margin: 2% auto;
 }
 
-.disclamer-double {
+.double .disclamer {
     width: 80%;
 }
 
@@ -418,7 +401,3 @@ p a:hover {
 .btn-url {
     margin: 15%;
 }
-
-/*.fa {
-    font-size: 235%;
-}*/
