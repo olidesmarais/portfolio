@@ -150,9 +150,7 @@ input:checked {
 
 /* Règles pour les cartes de contenu */
 
-main h4 {
-    font-size: 1rem;
-}
+
 
 .contenu {
     /* padding-bottom: 5%; */
@@ -170,7 +168,19 @@ main h4 {
 }
 
 .contenu h3 {
+    font-size: 3rem;
+}
+
+.contenu h4 {
     font-size: 2em;
+}
+
+.card-resume h4 {
+    font-size: 1.5em;
+}
+
+.contenu h5 {
+    font-size: 1.5em;
 }
 
 .card-header {
@@ -299,7 +309,7 @@ main h4 {
 
 .multi .card-title {
     margin: 6% 0%;
-    display: inline-block;
+    /* display: inline-block; */
     /* width: 49%; */
     text-align: right;
 }
@@ -328,9 +338,13 @@ main h4 {
 }
 
 @media screen and (min-width: 800px) {
+    .multi .card-header {
+        display:flex;
+        align-items: center;
+    }
     .multi .card-title {
         width: 49%;
-        display: inline-block;
+        /* display: flex; */
     }
     .multi .card-body {
         width: 80%;
