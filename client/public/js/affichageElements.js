@@ -117,10 +117,7 @@ function construire_elements() {
             //Ajout du carousel au divBody
             divContenu.childNodes[1].append(carousel);
             remplirMedia(contenu, carousel.childNodes[0]);
-
-            
             construire_carousel_complement(contenu, carousel);
-            console.log(contenu);
         }
 
         //Afficher le complément
@@ -209,21 +206,6 @@ function remplirResume(contenu) {
 
 //function remplirSimple(contenu, divBody)
 function remplirMedia(contenu, parent){
-    
-    // let dimension = contenu.dimension;
-    // divBody.innerHTML += '<h5 class="card-intertitre-' + dimension + '">Contexte</h5><p class="card-text">' + contenu.contexte + '</p>';
-    // let parent;
-    // //let carroussel;
-    
-    // //Création du carroussel pour les dimensions 'multi'
-    // if (contenu.dimension == 'multi') {
-    //     parent = construire_carousel(contenu, divBody);
-    // } else
-    //     parent = divBody;
-    if(contenu.id_element == 'udem') {
-        console.log('udem');
-        console.log(parent);
-    }
 
     for (idx = 0 ; idx < Object.keys(contenu.specifique).length ; idx++) {
         switch(contenu.type) {
@@ -432,7 +414,19 @@ function construire_carousel(contenu) {
 }
 
 function construire_carousel_complement(contenu, carousel) {
+    const dimension_media = (()=>{
+        // Accès au div 'carousel-inner' qui est présentement actif
+        // #id_element_carousel > .carousel-inner > carousel-item
+        let parent = document.getElementById(carousel.id).childNodes[0].childNodes[0];
+        // Retour du width et du height du média, enfant de carousel-item
+        return {
+            'width': parent.childNodes[0].width,
+            'height': parent.childNodes[0].height,
+        };
+    })();
+    
     carousel.append(
+        inner, 
         // Petits indicateur sous les vidéos
         indicateur = (() => {
             const indicateur = document.createElement('div');
@@ -455,13 +449,13 @@ function construire_carousel_complement(contenu, carousel) {
             }
             return indicateur;
         })(),
-        inner, 
         prev = (() => {
             const prev = document.createElement('button');
             prev.classList.add('carousel-control-prev');
             prev.setAttribute('type', 'button');
             prev.setAttribute('data-bs-target', '#' + carousel.id);
             prev.setAttribute('data-bs-slide','prev');
+            prev.setAttribute('style', 'height:' + dimension_media.height + 'px');
             prev.innerHTML = `<span class='carousel-control-prev-icon fleche' aria-hidden='true'></span>
                               <span class='visually-hidden'>Previous</span>
                              `
@@ -473,6 +467,7 @@ function construire_carousel_complement(contenu, carousel) {
             next.setAttribute('type', 'button');
             next.setAttribute('data-bs-target', '#' + carousel.id);
             next.setAttribute('data-bs-slide','next');
+            next.setAttribute('style', 'height:' + dimension_media.height + 'px');
             next.innerHTML = `<span class='carousel-control-next-icon fleche' aria-hidden='true'></span>
                               <span class='visually-hidden'>Next</span>
                              `
