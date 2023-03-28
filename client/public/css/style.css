@@ -1,5 +1,6 @@
 :root {
     font-size: 16px;
+    --taille-grand-ecran: 800px;
 }
 
 header {
@@ -215,11 +216,6 @@ main h4 {
     display: flex;
 }
 
-/* .simple .card-resume {
-    padding-left: 14%;
-    padding-bottom: 1%;
-} */
-
 .simple .card-complement {
     padding-top: 1%;
 }
@@ -230,7 +226,7 @@ main h4 {
     margin-top: 4%;
 }
 
-@media screen and (min-width:800px) {
+@media screen and (min-width: 800px) {
     .simple .card-header {
         width: 49%;
         display: inline-block;
@@ -304,21 +300,21 @@ main h4 {
 .multi .card-title {
     margin: 6% 0%;
     display: inline-block;
-    width: 49%;
+    /* width: 49%; */
     text-align: right;
 }
 
-.multi .card-body {
+/* .multi .card-body {
     display: inline-block;
-    width: 80%;
-}
+    width: 80%; 
+} */
 
 .multi .card-resume {
-    padding-left: 14%;
+    /* padding-left: 14%;
     padding-bottom: 1%;
     display: inline-block;
     width: 49%;
-    vertical-align: middle;
+    vertical-align: middle; */
     text-align: left;
 }
 
@@ -331,6 +327,17 @@ main h4 {
     margin-bottom: -2%;
 }
 
+@media screen and (min-width: 800px) {
+    .multi .card-title {
+        width: 49%;
+        display: inline-block;
+    }
+    .multi .card-body {
+        width: 80%;
+        display: inline-block;
+    }
+}
+
 /* Règles carousel */
 
 .carousel-indicators {
@@ -341,10 +348,10 @@ main h4 {
     background-color: #6c757d;
 }
 
-.carousel-control-next,
+/* .carousel-control-next,
 .carousel-control-prev {
     width: 120px;
-}
+} */
 
 .carousel-control-prev-icon {
     background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='grey'><path%20d='M11.354%201.646a.5.5%200%200%201%200%20.708L5.707%208l5.647%205.646a.5.5%200%200%201-.708.708l-6-6a.5.5%200%200%201%200-.708l6-6a.5.5%200%200%201%20.708%200z'/></svg>");
@@ -352,6 +359,15 @@ main h4 {
 
 .carousel-control-next-icon {
     background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='grey'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/></svg>");
+}
+
+.fleche {
+    margin:auto;
+    align-self: start;
+    background-position: inherit;
+    background-size: inherit;
+    /* vertical-align: top; */
+    margin-bottom: 87%;
 }
 
 main .active {
