@@ -160,7 +160,15 @@ input:checked {
 }
 
 .contenu h3 {
-    font-size: 3em;
+    font-size: 3rem;
+}
+
+.contenu h4 {
+    font-size: 2em;
+}
+
+.contenu h5 {
+    font-size: 1.5em;
 }
 
 .card-header {
