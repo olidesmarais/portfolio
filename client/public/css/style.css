@@ -341,7 +341,9 @@ main h4 {
 /* Règles carousel */
 
 .carousel-indicators {
-    bottom: -25px;
+    /* bottom: -25px; */
+    position:relative;
+    margin: 0 auto;
 }
 
 .carousel-indicators [data-bs-target] {
