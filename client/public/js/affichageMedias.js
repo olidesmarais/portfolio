@@ -157,11 +157,11 @@ function afficherUrl(idx, contenu, noSource, isSingle) {
     if (isSingle)
         classes += " btn-url";
     
-        return `
-        <a href='${listeElements[id].specifique[idx].url}' target='_blank' class='${classes}'>
-            ${listeElements[id].specifique[idx].texte}
-        </a>
-    `
+    return `
+            <a href='${listeElements[id].specifique[idx].url}' target='_blank' class='${classes}'>
+                ${listeElements[id].specifique[idx].texte}
+            </a>
+           `
 }
 
 function afficherExecutable(idx, contenu) {

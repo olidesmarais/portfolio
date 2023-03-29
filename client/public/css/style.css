@@ -146,6 +146,7 @@ input:checked {
     text-align: left;
     vertical-align: top;
     margin: 0 auto auto auto;
+    width:49%;
 }
 
 /* Règles pour les cartes de contenu */
@@ -266,7 +267,7 @@ input:checked {
 }
 
 .double .card-complement {
-    width: 49%;
+    width: 100%;
     display: inline-block;
     vertical-align: top;
 }
@@ -278,12 +279,14 @@ input:checked {
 }
 
 .double .card-text {
-    width: 80%;
+    /* width: 80%; */
     margin: 3% auto;
 }
 
 .double .card-complement a {
     margin-bottom: 3%;
+    width: 80%;
+    font-size: 20px;
 }
 
 .btn-primary,
@@ -299,6 +302,17 @@ input:checked {
     width: 90%;
     height: 700px;
     font-size: 10px;
+}
+
+@media screen and (min-width: 800px) {
+    .double .card-complement {
+        width: 49%;
+        display: inline-block;
+        vertical-align: top;
+    }
+    .bullet-point {
+        width: inherit;
+    }
 }
 
 /* Contenu multi */
