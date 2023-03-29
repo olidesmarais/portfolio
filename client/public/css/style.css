@@ -1,5 +1,6 @@
 :root {
-    font-size: 1em;
+    font-size: 16px;
+    --taille-grand-ecran: 800px;
 }
 
 header {
@@ -49,6 +50,10 @@ nav input {
     height: calc(var(--width)/100);
 }
 
+.container-fluid {
+    padding:0px;
+}
+
 #filtreCompetences,
 #filtreLogiciels {
     line-height: calc(var(--width)/0.5vh);
@@ -89,7 +94,7 @@ nav a {
 }
 
 .nav-item {
-    min-width: 25%;
+    min-width: 23.78%;
     /*float: left;*/
     border-style: solid;
     border-width: 1px;
@@ -140,9 +145,13 @@ input:checked {
     display: inline-block;
     text-align: left;
     vertical-align: top;
+    margin: 0 auto auto auto;
+    width:49%;
 }
 
 /* Règles pour les cartes de contenu */
+
+
 
 .contenu {
     /* padding-bottom: 5%; */
@@ -165,6 +174,10 @@ input:checked {
 
 .contenu h4 {
     font-size: 2em;
+}
+
+.card-resume h4 {
+    font-size: 1.5em;
 }
 
 .contenu h5 {
@@ -208,9 +221,10 @@ input:checked {
     padding-left: 10%;
 }
 
-.simple .card-resume {
-    padding-left: 14%;
-    padding-bottom: 1%;
+.card-resume {
+    padding:1%;
+    font-size: 0.8em;
+    display: flex;
 }
 
 .simple .card-complement {
@@ -223,7 +237,7 @@ input:checked {
     margin-top: 4%;
 }
 
-@media screen and (min-width:800px) {
+@media screen and (min-width: 800px) {
     .simple .card-header {
         width: 49%;
         display: inline-block;
@@ -253,7 +267,7 @@ input:checked {
 }
 
 .double .card-complement {
-    width: 49%;
+    width: 100%;
     display: inline-block;
     vertical-align: top;
 }
@@ -265,12 +279,14 @@ input:checked {
 }
 
 .double .card-text {
-    width: 80%;
+    /* width: 80%; */
     margin: 3% auto;
 }
 
 .double .card-complement a {
     margin-bottom: 3%;
+    width: 80%;
+    font-size: 20px;
 }
 
 .btn-primary,
@@ -288,6 +304,17 @@ input:checked {
     font-size: 10px;
 }
 
+@media screen and (min-width: 800px) {
+    .double .card-complement {
+        width: 49%;
+        display: inline-block;
+        vertical-align: top;
+    }
+    .bullet-point {
+        width: inherit;
+    }
+}
+
 /* Contenu multi */
 
 .multi .card-header {
@@ -296,22 +323,22 @@ input:checked {
 
 .multi .card-title {
     margin: 6% 0%;
-    display: inline-block;
-    width: 49%;
+    /* display: inline-block; */
+    /* width: 49%; */
     text-align: right;
 }
 
-.multi .card-body {
+/* .multi .card-body {
     display: inline-block;
-    width: 80%;
-}
+    width: 80%; 
+} */
 
 .multi .card-resume {
-    padding-left: 14%;
+    /* padding-left: 14%;
     padding-bottom: 1%;
     display: inline-block;
     width: 49%;
-    vertical-align: middle;
+    vertical-align: middle; */
     text-align: left;
 }
 
@@ -324,19 +351,37 @@ input:checked {
     margin-bottom: -2%;
 }
 
+@media screen and (min-width: 800px) {
+    .multi .card-header {
+        display:flex;
+        align-items: center;
+    }
+    .multi .card-title {
+        width: 49%;
+        /* display: flex; */
+    }
+    .multi .card-body {
+        width: 80%;
+        display: inline-block;
+    }
+}
+
 /* Règles carousel */
 
 .carousel-indicators {
-    bottom: -25px;
+    /* bottom: -25px; */
+    position:relative;
+    margin: 0 auto;
 }
 
 .carousel-indicators [data-bs-target] {
     background-color: #6c757d;
 }
 
-.carousel-control-next,
-.carousel-control-prev {
-    width: 120px;
+
+.carousel-control-prev,
+.carousel-control-next {
+    width:10%;
 }
 
 .carousel-control-prev-icon {
@@ -345,6 +390,12 @@ input:checked {
 
 .carousel-control-next-icon {
     background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='grey'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/></svg>");
+}
+
+.fleche {
+    /* padding: auto 10%; */
+    background-position: inherit;
+    background-size: inherit;
 }
 
 main .active {
@@ -396,7 +447,8 @@ p a:hover {
     margin: 0;
     font-weight: bold;
     text-align: left;
-    width: 83%;
+    width: 75%;
+    font-size: 0.75rem;
 }
 
 .disclamer-image {
