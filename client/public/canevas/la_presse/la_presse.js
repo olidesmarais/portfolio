@@ -41,9 +41,19 @@ la_presse = (sketch) => {
     press_spot = sketch.createVector(sketch.mouseX - centre.x, sketch.mouseY - centre.y);
   }
   
+  sketch.touchStarted = (event) => {  
+    // event.preventDefault();
+    pressed = true;
+    press_spot = sketch.createVector(sketch.mouseX - centre.x, sketch.mouseY - centre.y);
+  }
+
   sketch.mouseReleased = () => {
     pressed = false;
     
+  }
+
+  sketch.touchEnded = () => {  
+    pressed = false;
   }
 }
 
