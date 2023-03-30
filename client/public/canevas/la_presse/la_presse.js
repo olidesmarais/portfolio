@@ -37,23 +37,34 @@ la_presse = (sketch) => {
   }
   
   sketch.mousePressed = () => {  
-    pressed = true;
-    press_spot = sketch.createVector(sketch.mouseX - centre.x, sketch.mouseY - centre.y);
-  }
-  
-  sketch.touchStarted = (event) => {  
-    // event.preventDefault();
-    pressed = true;
-    press_spot = sketch.createVector(sketch.mouseX - centre.x, sketch.mouseY - centre.y);
+    if(!isTouchDevice && sketch.mouse_inside( sketch.mouseX, sketch.mouseY)) {
+      pressed = true;
+      press_spot = sketch.createVector(sketch.mouseX - centre.x, sketch.mouseY - centre.y);
+    }
   }
 
+  sketch.touchStarted = (event) => {
+    if (isTouchDevice && sketch.mouse_inside (sketch.mouseX, sketch.mouseY)) {
+      pressed = true;
+      event.preventDefault();
+      console.log('inside');
+    }
+  }
+  
   sketch.mouseReleased = () => {
     pressed = false;
     
   }
 
-  sketch.touchEnded = () => {  
+  sketch.touchEnded = () => {
     pressed = false;
+  }
+
+  sketch.mouse_inside = ( posX, posY) => {
+    // console.log('mouse_inside');
+    if (posX > 0 && posX < sketch.width && posY > 0 && posY < sketch.height)
+      return true;
+    return false;
   }
 }
 

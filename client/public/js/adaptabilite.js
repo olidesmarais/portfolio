@@ -1,5 +1,8 @@
 // Adaptabilite.js
 // Gère l'adaptabilité du site
+
+let isTouchDevice;
+
 let set_police = () => {
     const width = '--width';
     const largeur = document.body.offsetWidth;
@@ -22,7 +25,7 @@ window.addEventListener('resize', () => {
 });
 
 document.addEventListener("DOMContentLoaded", function(){
-    
+    isTouchDevice = 'ontouchstart' in document.documentElement;
     set_police();
     
 });
