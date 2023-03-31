@@ -94,7 +94,7 @@ nav a {
 }
 
 .nav-item {
-    min-width: 23.78%;
+    min-width: 25%;
     /*float: left;*/
     border-style: solid;
     border-width: 1px;
