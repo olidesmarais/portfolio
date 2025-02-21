@@ -27,5 +27,4 @@ window.addEventListener('resize', () => {
 document.addEventListener("DOMContentLoaded", function(){
     isTouchDevice = 'ontouchstart' in document.documentElement;
     set_police();
-    
 });
