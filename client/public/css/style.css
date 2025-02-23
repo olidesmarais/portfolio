@@ -10,64 +10,46 @@
 }
 
 header {
-    /* margin-right: 25%;
-    margin-left: 23% */
     margin: auto 20vw;
 }
 
 header h1,
 nav h1 {
-    /* font-size: 8rem; */
-    /*font-size: 800%;*/
-    /* font-size: calc(var(--width)/9); */
-
-    /* font-size: 12svw; */
     font-size: clamp( 3rem, 12svw, 10rem);
 }
 
 header h2,
 nav h2 {
-    /* font-size: calc(var(--width)/14); */
-
-    /* font-size: 6svw; */
     font-size: clamp( 1.75rem, 6svw, 6rem);
     
 }
 
 header h3,
 nav h3 {
-    /* font-size: calc(var(--width)/22); */
     font-size: 3svw;
 }
 
 header h4,
 nav h4 {
-    /* font-size: calc(var(--width)/45); */
     font-size: 2svw;
 }
 
 header h5,
 nav h5 {
-    /* font-size: calc(var(--width)/55); */
     font-size: 1.5svw;
 }
 
 header p{
-    /* font-size: 1rem; */
     font-size: clamp( 2svw, 1rem, 3rem);
 }
 
 
 
 nav label {
-    /* font-size: calc(var(--width)/70); */
     font-size: 0.75rem;
 }
 
 nav input {
-    /* width: calc(var(--width)/100);
-    height: calc(var(--width)/100); */
-
     width: 0.5rem;
     height: 0.5rem;
 }
@@ -75,11 +57,6 @@ nav input {
 .container-fluid {
     padding:0px;
 }
-
-/* #filtreCompetences,
-#filtreLogiciels {
-    line-height: calc(var(--width)/0.5vh);
-} */
 
 .allignementDroite {
     padding-left: 50%;
@@ -90,8 +67,6 @@ nav input {
 }
 
 #headerTitre {
-    /* margin-top: 40svh;
-    margin-bottom: 40svh; */
     margin: 30svh 0;
 }
 
@@ -105,7 +80,6 @@ nav {
 }
 
 nav ul {
-    /* font-size:calc(var(--width) / 52); */
     display: flex;
     
     padding: 0;
@@ -131,22 +105,11 @@ nav a {
 
 .nav-item {
     width: 25%;
-    /*float: left;*/
     border-style: solid;
     border-width: 1px;
     border-color: #6c757d;
-    /* display: flex; */
-    /* align-items: center; */
-    /* justify-content: center; */
-    /* font-size: 200%; */
     background-color: white;
 }
-
-/* .navbar-nav {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-} */
 
 .accordion-button,
 .accordion-button:focus,
@@ -187,10 +150,7 @@ input:checked {
 
 /* Règles pour les cartes de contenu */
 
-
-
 .contenu {
-    /* padding-bottom: 5%; */
     padding: 5% 10%;
     border: inherit;
 }
@@ -253,7 +213,6 @@ input:checked {
 
 .simple .card-body {
     display: inline-block;
-    /* width: 49%; */
     padding-left: 10%;
 }
 
@@ -315,7 +274,6 @@ input:checked {
 }
 
 .double .card-text {
-    /* width: 80%; */
     margin: 3% auto;
 }
 
@@ -359,22 +317,10 @@ input:checked {
 
 .multi .card-title {
     margin: 6% 0%;
-    /* display: inline-block; */
-    /* width: 49%; */
     text-align: right;
 }
 
-/* .multi .card-body {
-    display: inline-block;
-    width: 80%; 
-} */
-
 .multi .card-resume {
-    /* padding-left: 14%;
-    padding-bottom: 1%;
-    display: inline-block;
-    width: 49%;
-    vertical-align: middle; */
     text-align: left;
 }
 
@@ -394,7 +340,6 @@ input:checked {
     }
     .multi .card-title {
         width: 49%;
-        /* display: flex; */
     }
     .multi .card-body {
         width: 80%;
@@ -405,7 +350,6 @@ input:checked {
 /* Règles carousel */
 
 .carousel-indicators {
-    /* bottom: -25px; */
     position:relative;
     margin: 0 auto;
 }
@@ -429,7 +373,6 @@ input:checked {
 }
 
 .fleche {
-    /* padding: auto 10%; */
     background-position: inherit;
     background-size: inherit;
 }
